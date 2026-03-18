@@ -7,14 +7,24 @@
     
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="So Richard">
+    <meta name="application-name" content="So Richard">
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="theme-color" content="#FFB6C1">
+    
     <link rel="apple-touch-icon" href="https://img1.pic.in.th/images/quality_restoration_25690316203510056.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="https://img1.pic.in.th/images/quality_restoration_25690316203510056.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://img1.pic.in.th/images/quality_restoration_25690316203510056.png">
+    <link rel="apple-touch-icon" sizes="167x167" href="https://img1.pic.in.th/images/quality_restoration_25690316203510056.png">
+    
+    <link rel="icon" type="image/png" href="https://img1.pic.in.th/images/quality_restoration_25690316203510056.png">
+    <link rel="shortcut icon" href="https://img1.pic.in.th/images/quality_restoration_25690316203510056.png">
+
+    <link rel="manifest" id="manifest-link">
     
     <meta property="og:title" content="So Richard | บริการพรีเมียม">
     <meta property="og:description" content="บริการปั๊มยอดโซเชียล ซื้อแอปพรีเมียม เติมเกม ระบบอัตโนมัติ 24 ชั่วโมง ราคาถูกที่สุด">
     <meta property="og:image" content="https://img1.pic.in.th/images/quality_restoration_25690316203510056.png">
-    <meta property="og:url" content="">
     <meta property="og:type" content="website">
 
     <script src="https://cdn.tailwindcss.com"></script>
@@ -46,51 +56,19 @@
         ::-webkit-scrollbar-track { background: #FFF0F5; border-radius: 10px; }
         ::-webkit-scrollbar-thumb { background: #FFB6C1; border-radius: 10px; }
         
-        .cute-card { 
-            background: rgba(255, 255, 255, 0.95); 
-            backdrop-filter: blur(10px);
-            border: 2px solid #FFF0F5; 
-            border-radius: 1.5rem; 
-            box-shadow: 0 4px 20px rgba(255, 182, 193, 0.15); 
-        }
+        .cute-card { background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px); border: 2px solid #FFF0F5; border-radius: 1.5rem; box-shadow: 0 4px 20px rgba(255, 182, 193, 0.15); }
         
-        .cute-input { 
-            width: 100%; 
-            background: #FFF; 
-            border: 2px solid #FFE4E1; 
-            border-radius: 1rem; 
-            padding: 0.875rem 1.25rem; 
-            outline: none; 
-            transition: all 0.3s; 
-            font-weight: 500;
-            color: #4A4A4A;
-        }
+        .cute-input { width: 100%; background: #FFF; border: 2px solid #FFE4E1; border-radius: 1rem; padding: 0.875rem 1.25rem; outline: none; transition: all 0.3s; font-weight: 500; color: #4A4A4A; }
         .cute-input:focus { border-color: #FF69B4; box-shadow: 0 0 0 4px rgba(255, 105, 180, 0.1); }
         
-        .cute-select-wrapper {
-            display: flex; align-items: center; background: #FFF; border: 2px solid #FFE4E1;
-            border-radius: 1rem; padding: 0.5rem; transition: all 0.3s;
-        }
+        .cute-select-wrapper { display: flex; align-items: center; background: #FFF; border: 2px solid #FFE4E1; border-radius: 1rem; padding: 0.5rem; transition: all 0.3s; }
         .cute-select-wrapper:focus-within { border-color: #FF69B4; box-shadow: 0 0 0 4px rgba(255, 105, 180, 0.1); }
-        .cute-select-wrapper select {
-            width: 100%; background: transparent; border: none; outline: none;
-            padding: 0.5rem; font-weight: 600; color: #4A4A4A; cursor: pointer;
-        }
+        .cute-select-wrapper select { width: 100%; background: transparent; border: none; outline: none; padding: 0.5rem; font-weight: 600; color: #4A4A4A; cursor: pointer; }
 
-        .btn-pink { 
-            background: linear-gradient(135deg, #FF69B4 0%, #FF1493 100%); 
-            color: white; border-radius: 999px; font-weight: 600; 
-            transition: all 0.3s; box-shadow: 0 4px 15px rgba(255, 105, 180, 0.3); border: none; cursor: pointer;
-        }
+        .btn-pink { background: linear-gradient(135deg, #FF69B4 0%, #FF1493 100%); color: white; border-radius: 999px; font-weight: 600; transition: all 0.3s; box-shadow: 0 4px 15px rgba(255, 105, 180, 0.3); border: none; cursor: pointer; }
         .btn-pink:hover { transform: translateY(-2px); box-shadow: 0 6px 25px rgba(255, 105, 180, 0.5); }
         
-        .step-badge {
-            display: inline-flex; align-items: center; justify-content: center;
-            width: 28px; height: 28px; background-color: #FF69B4; color: white;
-            border-radius: 50%; font-weight: bold; font-size: 0.875rem;
-            margin-right: 0.5rem; box-shadow: 0 2px 5px rgba(255, 105, 180, 0.3);
-        }
-
+        .step-badge { display: inline-flex; align-items: center; justify-content: center; width: 28px; height: 28px; background-color: #FF69B4; color: white; border-radius: 50%; font-weight: bold; font-size: 0.875rem; margin-right: 0.5rem; box-shadow: 0 2px 5px rgba(255, 105, 180, 0.3); }
         .admin-tab { display: none; } .admin-tab.active { display: block; animation: fadeIn 0.3s; }
     </style>
 </head>
@@ -108,7 +86,7 @@
             </div>
             
             <div id="nav-guest" class="flex space-x-3 items-center">
-                <button onclick="showModal('login-modal')" class="text-pink-500 font-bold px-4 py-2 hover:bg-pink-50 rounded-full transition">เข้าสู่ระบบ</button>
+                <button onclick="showModal('login-modal')" class="text-pink-500 font-bold px-4 py-2 hover:bg-pink-50 rounded-full transition"><i class="fa-solid fa-right-to-bracket mr-2"></i> เข้าสู่ระบบ</button>
                 <button onclick="showModal('register-modal')" class="btn-pink px-6 py-2.5 hidden sm:flex items-center">
                     <i class="fa-solid fa-user-plus mr-2"></i> สมัครสมาชิก
                 </button>
@@ -150,7 +128,7 @@
                 <div class="w-36 h-36 bg-white rounded-[2rem] flex items-center justify-center shadow-xl border-2 border-pink-100 mb-8 mx-auto transform hover:rotate-3 transition duration-500 relative p-2">
                     <img src="https://img1.pic.in.th/images/quality_restoration_25690316203510056.png" alt="Logo" class="w-full h-full rounded-[1.5rem] object-cover">
                     <div class="absolute -bottom-3 -right-3 bg-pink-500 text-white w-12 h-12 rounded-full flex items-center justify-center border-4 border-white shadow-lg">
-                        <i class="fa-solid fa-heart"></i>
+                        <i class="fa-solid fa-check"></i>
                     </div>
                 </div>
                 <h1 class="text-5xl font-extrabold text-gray-800 mb-6 leading-tight">
@@ -159,11 +137,8 @@
                 </h1>
                 <p class="text-xl text-gray-500 mb-10">ระบบอัตโนมัติ 24 ชั่วโมง เติมเกม ซื้อแอป และบริการเพิ่มยอดโซเชียล</p>
                 <div class="flex flex-col sm:flex-row justify-center gap-4">
-                    <button onclick="showModal('register-modal')" class="btn-pink px-10 py-4 text-lg shadow-pink-200">
+                    <button onclick="showModal('register-modal')" class="btn-pink px-10 py-4 text-lg shadow-pink-200 flex justify-center items-center">
                         <i class="fa-solid fa-rocket mr-2"></i> เริ่มต้นใช้งานฟรี
-                    </button>
-                    <button onclick="showModal('login-modal')" class="bg-white text-pink-600 border-2 border-pink-200 font-bold px-10 py-4 rounded-full text-lg hover:bg-pink-50 transition shadow-sm">
-                        <i class="fa-solid fa-right-to-bracket mr-2"></i> เข้าสู่ระบบ
                     </button>
                 </div>
             </div>
@@ -179,7 +154,7 @@
                     <div class="text-gray-500 font-semibold mb-1">ยอดเติมเงินรวม (บาท)</div>
                     <div class="text-4xl font-bold text-gray-800" id="guest-stat-topup">0</div>
                 </div>
-                <div class="cute-card p-8 text-center flex flex-col items-center justify-center group relative overflow-hidden">
+                <div class="cute-card p-8 text-center flex flex-col items-center justify-center group relative overflow-hidden border-t-4 border-t-purple-400">
                     <div class="w-16 h-16 bg-purple-50 rounded-2xl flex items-center justify-center text-purple-500 text-3xl mb-4 group-hover:scale-110 transition"><i class="fa-solid fa-box-open"></i></div>
                     <div class="text-gray-500 font-semibold mb-1">ออเดอร์สำเร็จ</div>
                     <div class="text-4xl font-bold text-gray-800" id="guest-stat-orders">0</div>
@@ -200,7 +175,7 @@
                 <div class="absolute right-0 top-0 opacity-5 text-[10rem] text-pink-300 pointer-events-none -mt-10 -mr-10"><i class="fa-solid fa-crown"></i></div>
                 <div class="flex items-center relative z-10">
                     <div class="w-20 h-20 bg-white rounded-full flex items-center justify-center text-pink-400 text-4xl border-4 border-pink-100 shadow-sm shrink-0">
-                        <i class="fa-solid fa-face-smile"></i>
+                        <i class="fa-regular fa-face-smile"></i>
                     </div>
                     <div class="ml-6">
                         <h2 class="text-3xl font-extrabold text-gray-800 mb-1">สวัสดีคุณ, <span id="dash-username" class="text-pink-500">User</span></h2>
@@ -213,7 +188,7 @@
                 <div class="cute-card p-6 flex flex-col justify-between border-t-4 border-t-pink-400 bounce-soft">
                     <div class="flex justify-between items-start mb-4">
                         <div class="w-12 h-12 bg-pink-50 rounded-xl flex items-center justify-center text-pink-500 text-2xl"><i class="fa-solid fa-wallet"></i></div>
-                        <span class="text-xs font-bold text-gray-400 bg-gray-50 px-2 py-1 rounded-md">ยอดคงเหลือ</span>
+                        <span class="text-xs font-bold text-gray-400 bg-gray-50 px-2 py-1 rounded-md border border-gray-100">ยอดคงเหลือ</span>
                     </div>
                     <div>
                         <div class="text-3xl font-black text-gray-800 mb-1"><span id="dash-credit" class="text-pink-600">0.00</span> THB</div>
@@ -292,9 +267,7 @@
                                 <span class="step-badge">1</span> เลือกแพลตฟอร์ม
                             </label>
                             <div class="cute-select-wrapper border-gray-200">
-                                <div class="w-10 h-10 bg-white rounded-xl flex items-center justify-center text-pink-400 shrink-0 shadow-sm">
-                                    <i class="fa-solid fa-mobile-screen text-xl"></i>
-                                </div>
+                                <div class="w-10 h-10 bg-white rounded-xl flex items-center justify-center text-pink-400 shrink-0 shadow-sm"><i class="fa-solid fa-mobile-screen text-xl"></i></div>
                                 <select id="smm-platform" onchange="renderSMMCategories()">
                                     <option value="">-- โหลดข้อมูลแพลตฟอร์ม... --</option>
                                 </select>
@@ -307,21 +280,13 @@
                             </label>
                             <div class="space-y-4">
                                 <div class="cute-select-wrapper border-gray-200">
-                                    <div class="w-10 h-10 bg-white rounded-xl flex items-center justify-center text-purple-400 shrink-0 shadow-sm">
-                                        <i class="fa-solid fa-folder-open text-lg"></i>
-                                    </div>
-                                    <select id="smm-category" onchange="renderSMMServices()">
-                                        <option value="">-- กรุณาเลือกแพลตฟอร์มก่อน --</option>
-                                    </select>
+                                    <div class="w-10 h-10 bg-white rounded-xl flex items-center justify-center text-purple-400 shrink-0 shadow-sm"><i class="fa-solid fa-folder-open text-lg"></i></div>
+                                    <select id="smm-category" onchange="renderSMMServices()"><option value="">-- กรุณาเลือกแพลตฟอร์มก่อน --</option></select>
                                 </div>
                                 
                                 <div class="cute-select-wrapper bg-pink-50 border-pink-200">
-                                    <div class="w-10 h-10 bg-white rounded-xl flex items-center justify-center text-pink-500 shrink-0 shadow-sm">
-                                        <i class="fa-solid fa-check-circle text-lg"></i>
-                                    </div>
-                                    <select id="smm-service" onchange="updateSMMDetails()" class="text-pink-700">
-                                        <option value="">-- กรุณาเลือกหมวดหมู่ก่อน --</option>
-                                    </select>
+                                    <div class="w-10 h-10 bg-white rounded-xl flex items-center justify-center text-pink-500 shrink-0 shadow-sm"><i class="fa-solid fa-check-circle text-lg"></i></div>
+                                    <select id="smm-service" onchange="updateSMMDetails()" class="text-pink-700"><option value="">-- กรุณาเลือกหมวดหมู่ก่อน --</option></select>
                                 </div>
                             </div>
                             
@@ -330,7 +295,7 @@
                                 <div class="pl-2">
                                     <div class="flex justify-between items-center mb-3 border-b border-gray-100 pb-3">
                                         <span class="text-gray-500 font-bold text-sm">เรทบริการ (ต่อ 1,000 ยอด):</span>
-                                        <span class="bg-pink-100 text-pink-700 px-3 py-1 rounded-lg font-black" id="smm-rate-info">0.00 THB</span>
+                                        <span class="bg-pink-100 text-pink-700 px-3 py-1 rounded-lg font-black" id="smm-rate-info">0.00 ฿</span>
                                     </div>
                                     <div class="mb-4">
                                         <span class="text-xs text-gray-400 font-bold mb-1 block"><i class="fa-solid fa-link mr-1"></i> ตัวอย่างการใส่ลิงก์ที่ถูกต้อง:</span>
@@ -358,10 +323,16 @@
                                     <label class="block text-sm text-gray-500 font-bold mb-2 ml-1">ลิงก์เป้าหมาย (URL)</label>
                                     <input type="text" id="smm-link" class="cute-input" placeholder="วางลิงก์ที่ต้องการปั๊มยอดที่นี่">
                                 </div>
+
+                                <div id="smm-comments-container" class="hidden">
+                                    <label class="block text-sm text-gray-500 font-bold mb-2 ml-1">ข้อความคอมเมนต์ <span class="text-pink-500 font-normal">(1 บรรทัด = 1 จำนวน)</span></label>
+                                    <textarea id="smm-comments" rows="4" class="cute-input font-medium leading-relaxed" placeholder="พิมพ์ข้อความที่นี่...&#10;ข้อความที่สอง..." oninput="calculateSMMPrice()"></textarea>
+                                </div>
+
                                 <div class="grid grid-cols-2 gap-6">
                                     <div>
                                         <label class="block text-sm text-gray-500 font-bold mb-2 ml-1">จำนวนที่ต้องการ</label>
-                                        <input type="number" id="smm-qty" oninput="calculateSMMPrice()" class="cute-input text-lg font-bold" placeholder="ระบุตัวเลข">
+                                        <input type="number" id="smm-qty" oninput="calculateSMMPrice()" class="cute-input text-lg font-bold transition-all" placeholder="ระบุตัวเลข">
                                     </div>
                                     <div>
                                         <label class="block text-sm text-gray-500 font-bold mb-2 ml-1 text-right pr-2">ราคารวม</label>
@@ -397,7 +368,7 @@
                             <i class="fa-solid fa-circle-question text-pink-400 text-xl mr-2"></i>
                             <h3 class="font-bold text-pink-700">เงื่อนไขการคืนเงิน</h3>
                         </div>
-                        <p class="text-xs text-pink-600/80 leading-relaxed font-medium">ระบบทางร้านเป็นแบบอัตโนมัติ หากใส่ลิงก์ผิดรูปแบบ บัญชีเป็นส่วนตัว หรือลบโพสต์ทิ้ง ระบบจะ <b class="text-pink-600">ไม่สามารถยกเลิกหรือคืนเงินได้</b> ในทุกกรณี โปรดตรวจสอบลิงก์ให้แน่ใจก่อนกดสั่งซื้อ</p>
+                        <p class="text-xs text-pink-600/80 leading-relaxed font-medium">ระบบทำงานอัตโนมัติ หากใส่ลิงก์ผิดรูปแบบ บัญชีเป็นส่วนตัว หรือลบโพสต์ทิ้ง ระบบจะ <b class="text-pink-600">ไม่สามารถยกเลิกหรือคืนเงินได้</b> ในทุกกรณี โปรดตรวจสอบลิงก์ให้แน่ใจก่อนกดสั่งซื้อ</p>
                     </div>
                 </div>
             </div>
@@ -443,8 +414,7 @@
 
                 <div id="admin-tab-stock" class="admin-tab cute-card p-8 border-t-4 border-purple-500">
                     <h3 class="font-bold text-xl mb-2 text-gray-800">3. เติมสต๊อก (เพิ่มรหัสสินค้า)</h3>
-                    <p class="text-sm text-gray-500 mb-6">สำหรับแอปพรีเมียม จะแสดงป้ายจำนวนชิ้นที่หน้าร้านอัตโนมัติ</p>
-                    <div class="space-y-5">
+                    <div class="space-y-5 mt-6">
                         <div class="cute-select-wrapper border-purple-100 bg-white p-0">
                             <select id="stock-product-id" class="w-full p-3 font-bold text-gray-700 border-none outline-none">
                                 <option value="">-- กำลังโหลดรายการแอปพรีเมียม --</option>
@@ -494,22 +464,30 @@
             <div class="text-center mb-6">
                 <i class="fa-solid fa-rocket text-5xl text-pink-500 mb-3"></i>
                 <h3 class="text-2xl font-extrabold text-gray-800">ยืนยันการสั่งซื้อ</h3>
+                <p class="text-sm text-gray-500">กรุณาตรวจสอบข้อมูลให้ถูกต้องก่อนกดยืนยัน</p>
             </div>
             
             <div class="bg-gray-50 rounded-2xl p-5 mb-6 border border-gray-100 space-y-3 text-sm">
                 <div class="flex justify-between border-b pb-2"><span class="text-gray-500 font-bold">บริการ:</span> <span id="confirm-smm-name" class="font-bold text-gray-800 text-right w-48 truncate"></span></div>
                 <div class="flex justify-between border-b pb-2"><span class="text-gray-500 font-bold">ลิงก์เป้าหมาย:</span> <span id="confirm-smm-link" class="font-mono text-xs text-blue-500 w-48 truncate text-right"></span></div>
                 <div class="flex justify-between border-b pb-2"><span class="text-gray-500 font-bold">จำนวน:</span> <span id="confirm-smm-qty" class="font-bold text-gray-800"></span></div>
-                <div class="flex justify-between pt-1"><span class="text-gray-500 font-bold">ยอดที่ต้องชำระ:</span> <span class="font-black text-pink-600 text-lg"><span id="confirm-smm-price"></span> THB</span></div>
+                
+                <div id="confirm-smm-comment-box" class="hidden border-b pb-2">
+                    <span class="text-gray-500 font-bold mb-1 block">ข้อความคอมเมนต์:</span>
+                    <div id="confirm-smm-comments" class="bg-white border border-gray-200 p-2 rounded-lg text-xs text-gray-600 font-mono whitespace-pre-wrap max-h-24 overflow-y-auto"></div>
+                </div>
+
+                <div class="flex justify-between pt-1 items-center"><span class="text-gray-500 font-bold">ยอดที่ต้องชำระ:</span> <span class="font-black text-pink-600 text-xl"><span id="confirm-smm-price"></span> THB</span></div>
             </div>
 
-            <div class="bg-pink-50 p-4 rounded-xl mb-6 text-xs text-pink-700 font-medium">
-                <i class="fa-solid fa-circle-exclamation mr-1"></i> กรุณาตรวจสอบลิงก์และตั้งค่าเป็น <b>สาธารณะ</b> ระบบไม่สามารถยกเลิกหรือคืนเงินได้หากลิงก์ผิดพลาด
+            <div class="bg-pink-50 p-4 rounded-xl mb-6 text-xs text-pink-700 font-medium flex items-start shadow-inner border border-pink-100">
+                <i class="fa-solid fa-circle-exclamation text-base mr-2 mt-0.5"></i>
+                <span>กรุณาตั้งค่าบัญชีให้เป็น <b>สาธารณะ</b> ระบบไม่สามารถยกเลิกหรือคืนเงินได้ในทุกกรณีหากกรอกลิงก์ผิดพลาดนะคะ</span>
             </div>
 
             <div class="flex space-x-3">
-                <button onclick="hideModal('smm-confirm-modal')" class="flex-1 bg-white border-2 border-gray-200 text-gray-600 font-bold py-3 rounded-xl hover:bg-gray-50 transition">ยกเลิก</button>
-                <button onclick="processSMMOrder()" class="flex-1 btn-pink py-3 rounded-xl shadow-md">ยืนยันสั่งซื้อ</button>
+                <button onclick="hideModal('smm-confirm-modal')" class="flex-1 bg-white border-2 border-gray-200 text-gray-600 font-bold py-3.5 rounded-xl hover:bg-gray-50 transition shadow-sm">ยกเลิก</button>
+                <button onclick="processSMMOrder()" class="flex-1 btn-pink py-3.5 rounded-xl shadow-lg font-bold"><i class="fa-solid fa-check mr-1"></i> ยืนยันสั่งซื้อ</button>
             </div>
         </div>
     </div>
@@ -630,13 +608,30 @@
     </div>
 
     <script>
-        // *** 🔴 สำคัญ: นำ URL ของ Apps Script มาวางตรงนี้ ***
+        // *** 🔴 วาง URL ของ Google Apps Script ของคุณที่นี่ 🔴 ***
         const API_URL = "https://script.google.com/macros/s/AKfycbyfAlBgDpUAc-EDrUAu1nF2-ffZh39un5aTA6uTLJ9lCzykTUm59jEW_7u3AX7slqCC/exec"; 
         
         let currentUser = null;
         let smmDataCache = null; 
         let globalMessages = [];
         let productsCache = [];
+
+        // PWA Manifest Generation
+        const manifestObj = {
+            "name": "So Richard",
+            "short_name": "So Richard",
+            "description": "บริการปั๊มยอดโซเชียล ซื้อแอปพรีเมียม เติมเกม",
+            "start_url": window.location.href.split('?')[0],
+            "display": "standalone",
+            "background_color": "#FFF5F8",
+            "theme_color": "#FFB6C1",
+            "icons": [
+                { "src": "https://img1.pic.in.th/images/quality_restoration_25690316203510056.png", "sizes": "192x192", "type": "image/png" },
+                { "src": "https://img1.pic.in.th/images/quality_restoration_25690316203510056.png", "sizes": "512x512", "type": "image/png" }
+            ]
+        };
+        const manifestBlob = new Blob([JSON.stringify(manifestObj)], {type: 'application/manifest+json'});
+        document.getElementById('manifest-link').setAttribute('href', URL.createObjectURL(manifestBlob));
 
         async function fetchGAS(payload) {
             showModal('loading-modal');
@@ -822,7 +817,7 @@
             reader.onload = async function() { const res = await fetchGAS({ action: 'topup', username: currentUser.username, amount: amt, ref_code: ref, file: reader.result }); if(res && res.status === 'success') { closeAllModals(); showAlert('ส่งหลักฐานสำเร็จ!', res.message, 'success'); document.getElementById('topup-amount').value=''; document.getElementById('topup-ref').value=''; document.getElementById('topup-file').value=''; } else if(res) showAlert('ผิดพลาด', res.message, 'error'); }; reader.readAsDataURL(file);
         }
 
-        // --- SMM System with Dynamic Examples ---
+        // --- SMM System with Dynamic Custom Comments ---
         async function initializeSMM() {
             if(!smmDataCache) {
                 const res = await fetchGAS({ action: 'get_smm' });
@@ -835,21 +830,21 @@
 
         function renderSMMCategories() {
             const plat = document.getElementById('smm-platform').value; const catSel = document.getElementById('smm-category');
-            catSel.innerHTML = '<option value="">-- เลือกหมวดหมู่ --</option>'; document.getElementById('smm-service').innerHTML = '<option value="">-- กรุณาเลือกหมวดหมู่ก่อน --</option>'; document.getElementById('smm-detail-box').classList.add('hidden');
+            catSel.innerHTML = '<option value="">-- เลือกหมวดหมู่ --</option>'; document.getElementById('smm-service').innerHTML = '<option value="">-- กรุณาเลือกหมวดหมู่ก่อน --</option>'; document.getElementById('smm-detail-box').classList.add('hidden'); document.getElementById('smm-comments-container').classList.add('hidden'); document.getElementById('smm-qty').value = ''; document.getElementById('smm-price').innerText = '0.00';
             if(plat && smmDataCache[plat]) smmDataCache[plat].forEach((c, idx) => { catSel.innerHTML += `<option value="${idx}">${c.category_name}</option>`; });
         }
 
         function renderSMMServices() {
             const plat = document.getElementById('smm-platform').value; const catIdx = document.getElementById('smm-category').value; const srvSel = document.getElementById('smm-service');
-            srvSel.innerHTML = '<option value="">-- เลือกบริการที่ต้องการ --</option>'; document.getElementById('smm-detail-box').classList.add('hidden');
-            if(plat && catIdx !== "") smmDataCache[plat][catIdx].services.forEach((s, idx) => { srvSel.innerHTML += `<option value="${idx}" data-id="${s.id}" data-rate="${s.rate}" data-min="${s.min}" data-max="${s.max}" data-desc="${s.desc}" data-name="${s.name}">${s.name}</option>`; });
+            srvSel.innerHTML = '<option value="">-- เลือกบริการที่ต้องการ --</option>'; document.getElementById('smm-detail-box').classList.add('hidden'); document.getElementById('smm-comments-container').classList.add('hidden'); document.getElementById('smm-qty').value = ''; document.getElementById('smm-price').innerText = '0.00';
+            if(plat && catIdx !== "") smmDataCache[plat][catIdx].services.forEach((s, idx) => { srvSel.innerHTML += `<option value="${idx}" data-id="${s.id}" data-rate="${s.rate}" data-min="${s.min}" data-max="${s.max}" data-desc="${s.desc}" data-name="${s.name}" data-type="Default">${s.name}</option>`; });
         }
 
         function getExampleLink(platform, serviceName) {
             let p = platform.toLowerCase(); let n = serviceName.toLowerCase();
             if (p === 'tiktok') {
                 if (n.includes('ผู้ติดตาม')) return 'https://www.tiktok.com/@username';
-                return 'https://vt.tiktok.com/xxxxx/ หรือ https://www.tiktok.com/@username/video/1234';
+                return 'https://vt.tiktok.com/xxxxx/';
             } else if (p === 'instagram') {
                 if (n.includes('ผู้ติดตาม')) return 'https://www.instagram.com/username';
                 if (n.includes('วิว') || n.includes('reels')) return 'https://www.instagram.com/reel/xxxx/';
@@ -857,10 +852,10 @@
             } else if (p === 'facebook') {
                 if (n.includes('ผู้ติดตาม') || n.includes('เพจ')) return 'https://www.facebook.com/username';
                 if (n.includes('วีดีโอ') || n.includes('วิว')) return 'https://www.facebook.com/watch?v=1234';
-                return 'https://www.facebook.com/username/posts/1234 (ห้ามใส่ลิงก์ /share/)';
+                return 'https://www.facebook.com/username/posts/1234';
             } else if (p === 'youtube') {
-                if (n.includes('ผู้ติดตาม') || n.includes('subscribe')) return 'https://www.youtube.com/channel/UCxxxx หรือ @username';
-                return 'https://www.youtube.com/watch?v=xxxx';
+                if (n.includes('ผู้ติดตาม') || n.includes('subscribe')) return '@username หรือลิงก์ช่อง';
+                return 'https://youtube.com/watch?v=xxxx';
             } else if (p === 'x') {
                 if (n.includes('ผู้ติดตาม')) return 'https://x.com/username';
                 return 'https://x.com/username/status/123456789';
@@ -871,25 +866,59 @@
         function updateSMMDetails() {
             const plat = document.getElementById('smm-platform').value;
             const sel = document.getElementById('smm-service'); const box = document.getElementById('smm-detail-box');
+            const commentBox = document.getElementById('smm-comments-container');
+            const qtyInput = document.getElementById('smm-qty');
+
             if(sel.selectedIndex > 0) { 
                 const opt = sel.options[sel.selectedIndex]; 
+                const name = String(opt.getAttribute('data-name')).toLowerCase();
+                
+                // ตรวจสอบบริการ "คอมเมนต์"
+                const isCustom = name.includes('กำหนดเอง') || name.includes('คอมเมนต์') || name.includes('ความคิดเห็น');
+
+                if (isCustom) {
+                    commentBox.classList.remove('hidden'); commentBox.classList.add('fade-in');
+                    qtyInput.setAttribute('readonly', 'true'); qtyInput.classList.add('bg-gray-100', 'cursor-not-allowed', 'text-gray-400');
+                    qtyInput.value = ''; document.getElementById('smm-comments').value = '';
+                } else {
+                    commentBox.classList.add('hidden');
+                    qtyInput.removeAttribute('readonly'); qtyInput.classList.remove('bg-gray-100', 'cursor-not-allowed', 'text-gray-400');
+                }
+
                 document.getElementById('smm-rate-info').innerText = `${opt.getAttribute('data-rate')} ฿`;
                 document.getElementById('smm-example-link').innerText = getExampleLink(plat, opt.getAttribute('data-name'));
                 document.getElementById('smm-desc').innerText = opt.getAttribute('data-desc') || 'ไม่มีเงื่อนไขเพิ่มเติม'; 
                 document.getElementById('smm-min').innerText = opt.getAttribute('data-min'); 
                 document.getElementById('smm-max').innerText = opt.getAttribute('data-max'); 
+                
                 box.classList.remove('hidden'); box.classList.add('fade-in'); calculateSMMPrice(); 
-            } else { box.classList.add('hidden'); }
+            } else { 
+                box.classList.add('hidden'); commentBox.classList.add('hidden');
+            }
         }
 
         function calculateSMMPrice() {
-            const sel = document.getElementById('smm-service'), qty = document.getElementById('smm-qty').value;
-            if (sel.selectedIndex > 0 && qty > 0) { const rate = parseFloat(sel.options[sel.selectedIndex].getAttribute('data-rate')); document.getElementById('smm-price').innerText = ((rate / 1000) * qty).toFixed(2); } else document.getElementById('smm-price').innerText = '0.00';
+            const sel = document.getElementById('smm-service');
+            const commentBox = document.getElementById('smm-comments-container');
+            let qty = 0;
+
+            if (!commentBox.classList.contains('hidden')) {
+                const text = document.getElementById('smm-comments').value;
+                const lines = text.split('\n').filter(line => line.trim() !== '');
+                qty = lines.length; document.getElementById('smm-qty').value = qty;
+            } else {
+                qty = parseInt(document.getElementById('smm-qty').value) || 0;
+            }
+
+            if (sel.selectedIndex > 0 && qty > 0) { 
+                const rate = parseFloat(sel.options[sel.selectedIndex].getAttribute('data-rate')); 
+                document.getElementById('smm-price').innerText = ((rate / 1000) * qty).toFixed(2); 
+            } else { document.getElementById('smm-price').innerText = '0.00'; }
         }
 
         function previewSMMOrder() {
             const sel = document.getElementById('smm-service'); if(sel.selectedIndex === 0) return showAlert('ยังไม่เลือกบริการ', 'กรุณาเลือกบริการปั๊มยอดที่ต้องการก่อนค่ะ', 'error');
-            const link = document.getElementById('smm-link').value, qty = document.getElementById('smm-qty').value; const price = parseFloat(document.getElementById('smm-price').innerText);
+            const link = document.getElementById('smm-link').value, qty = parseInt(document.getElementById('smm-qty').value) || 0; const price = parseFloat(document.getElementById('smm-price').innerText);
             const min = parseInt(sel.options[sel.selectedIndex].getAttribute('data-min')); const max = parseInt(sel.options[sel.selectedIndex].getAttribute('data-max'));
 
             if(!link || qty <= 0) return showAlert('ข้อมูลไม่ครบ', 'ใส่ลิงก์และจำนวนให้ถูกต้องนะคะ', 'error'); 
@@ -900,6 +929,13 @@
             document.getElementById('confirm-smm-link').innerText = link;
             document.getElementById('confirm-smm-qty').innerText = qty;
             document.getElementById('confirm-smm-price').innerText = price.toFixed(2);
+
+            const isCustom = !document.getElementById('smm-comments-container').classList.contains('hidden');
+            if(isCustom) {
+                document.getElementById('confirm-smm-comments').innerText = document.getElementById('smm-comments').value;
+                document.getElementById('confirm-smm-comment-box').classList.remove('hidden');
+            } else { document.getElementById('confirm-smm-comment-box').classList.add('hidden'); }
+
             showModal('smm-confirm-modal');
         }
 
@@ -907,8 +943,16 @@
             hideModal('smm-confirm-modal');
             const sel = document.getElementById('smm-service'); const serviceId = sel.options[sel.selectedIndex].getAttribute('data-id'); 
             const link = document.getElementById('smm-link').value; const qty = document.getElementById('smm-qty').value; const price = parseFloat(document.getElementById('smm-price').innerText);
-            const res = await fetchGAS({ action: 'order_smm', username: currentUser.username, service_id: serviceId, link: link, quantity: qty, price: price });
-            if(res && res.status === 'success') { showAlert('สั่งซื้อสำเร็จ!', res.message, 'success'); document.getElementById('smm-link').value = ''; document.getElementById('smm-qty').value = ''; document.getElementById('smm-price').innerText = '0.00'; loadDashboard(); } else if(res) showAlert('ผิดพลาด', res.message, 'error');
+            
+            const isCustom = !document.getElementById('smm-comments-container').classList.contains('hidden');
+            const comments = isCustom ? document.getElementById('smm-comments').value : '';
+
+            const res = await fetchGAS({ action: 'order_smm', username: currentUser.username, service_id: serviceId, link: link, quantity: qty, comments: comments, price: price });
+            if(res && res.status === 'success') { 
+                showAlert('สั่งซื้อสำเร็จ!', res.message, 'success'); 
+                document.getElementById('smm-link').value = ''; document.getElementById('smm-qty').value = ''; if(isCustom) document.getElementById('smm-comments').value = ''; document.getElementById('smm-price').innerText = '0.00'; 
+                loadDashboard(); 
+            } else if(res) showAlert('ผิดพลาด', res.message, 'error');
         }
 
         // --- Store / Game ---
