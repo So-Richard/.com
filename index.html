@@ -11,7 +11,15 @@
     <meta name="application-name" content="So Richard">
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="theme-color" content="#FFB6C1">
+    
     <link rel="apple-touch-icon" href="https://img1.pic.in.th/images/quality_restoration_25690316203510056.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="https://img1.pic.in.th/images/quality_restoration_25690316203510056.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://img1.pic.in.th/images/quality_restoration_25690316203510056.png">
+    <link rel="apple-touch-icon" sizes="167x167" href="https://img1.pic.in.th/images/quality_restoration_25690316203510056.png">
+    
+    <link rel="icon" type="image/png" href="https://img1.pic.in.th/images/quality_restoration_25690316203510056.png">
+    <link rel="shortcut icon" href="https://img1.pic.in.th/images/quality_restoration_25690316203510056.png">
+    <link rel="manifest" id="manifest-link">
     
     <meta property="og:title" content="So Richard | บริการพรีเมียม">
     <meta property="og:description" content="บริการปั๊มยอดโซเชียล ซื้อแอปพรีเมียม เติมเกม ระบบอัตโนมัติ 24 ชั่วโมง ราคาถูกที่สุด">
@@ -34,7 +42,7 @@
             -webkit-tap-highlight-color: transparent;
         }
         
-        .fade-in { animation: fadeIn 0.4s ease-out; }
+        .fade-in { animation: fadeIn 0.5s ease-out; }
         @keyframes fadeIn { from { opacity: 0; transform: translateY(15px); } to { opacity: 1; transform: translateY(0); } }
         .slide-up { animation: slideUp 0.5s cubic-bezier(0.16, 1, 0.3, 1); }
         @keyframes slideUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
@@ -48,7 +56,6 @@
         ::-webkit-scrollbar-thumb { background: #FFB6C1; border-radius: 10px; }
         
         .cute-card { background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px); border: 2px solid #FFF0F5; border-radius: 1.5rem; box-shadow: 0 4px 20px rgba(255, 182, 193, 0.15); }
-        
         .cute-input { width: 100%; background: #FFF; border: 2px solid #FFE4E1; border-radius: 1rem; padding: 0.875rem 1.25rem; outline: none; transition: all 0.3s; font-weight: 500; color: #4A4A4A; }
         .cute-input:focus { border-color: #FF69B4; box-shadow: 0 0 0 4px rgba(255, 105, 180, 0.1); }
         
@@ -135,17 +142,17 @@
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6 w-full mb-16 max-w-5xl mx-auto slide-up">
-                <div class="cute-card p-8 text-center flex flex-col items-center justify-center group relative overflow-hidden">
+                <div class="cute-card p-8 text-center flex flex-col items-center justify-center group relative overflow-hidden border-t-4 border-blue-400">
                     <div class="w-16 h-16 bg-blue-50 rounded-2xl flex items-center justify-center text-blue-500 text-3xl mb-4 group-hover:scale-110 transition"><i class="fa-solid fa-users"></i></div>
                     <div class="text-gray-500 font-semibold mb-1">สมาชิกทั้งหมด</div>
                     <div class="text-4xl font-bold text-gray-800" id="guest-stat-users">0</div>
                 </div>
-                <div class="cute-card p-8 text-center flex flex-col items-center justify-center group relative overflow-hidden border-t-4 border-t-green-400">
+                <div class="cute-card p-8 text-center flex flex-col items-center justify-center group relative overflow-hidden border-t-4 border-green-400">
                     <div class="w-16 h-16 bg-green-50 rounded-2xl flex items-center justify-center text-green-500 text-3xl mb-4 group-hover:scale-110 transition"><i class="fa-solid fa-money-bill-trend-up"></i></div>
                     <div class="text-gray-500 font-semibold mb-1">ยอดเติมเงินรวม (บาท)</div>
                     <div class="text-4xl font-bold text-gray-800" id="guest-stat-topup">0</div>
                 </div>
-                <div class="cute-card p-8 text-center flex flex-col items-center justify-center group relative overflow-hidden border-t-4 border-t-purple-400">
+                <div class="cute-card p-8 text-center flex flex-col items-center justify-center group relative overflow-hidden border-t-4 border-purple-400">
                     <div class="w-16 h-16 bg-purple-50 rounded-2xl flex items-center justify-center text-purple-500 text-3xl mb-4 group-hover:scale-110 transition"><i class="fa-solid fa-box-open"></i></div>
                     <div class="text-gray-500 font-semibold mb-1">ออเดอร์สำเร็จ</div>
                     <div class="text-4xl font-bold text-gray-800" id="guest-stat-orders">0</div>
@@ -157,7 +164,17 @@
                     <i class="fa-solid fa-star text-yellow-400 text-2xl mr-3"></i>
                     <h2 class="text-3xl font-bold text-gray-800">สินค้าพรีเมียมแนะนำ</h2>
                 </div>
-                <div class="grid grid-cols-2 md:grid-cols-4 gap-6" id="guest-products-grid"></div>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-6" id="guest-products-grid">
+                    </div>
+            </div>
+
+            <div class="w-full mb-16 slide-up">
+                <div class="flex items-center justify-center mb-8">
+                    <i class="fa-solid fa-bolt text-purple-400 text-2xl mr-3"></i>
+                    <h2 class="text-3xl font-bold text-gray-800">บริการเพิ่มยอดโซเชียล</h2>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6" id="guest-smm-grid">
+                    </div>
             </div>
         </div>
 
@@ -414,7 +431,8 @@
                         </div>
                         <div>
                             <label class="block text-sm text-gray-500 mb-2 font-bold">ใส่รหัสสินค้า (1 บรรทัด = 1 รหัส)</label>
-                            <textarea id="stock-codes" class="cute-input h-48 font-mono text-sm border-purple-100 leading-relaxed bg-gray-50" placeholder="email1@test.com:pass1&#10;email2@test.com:pass2"></textarea>
+                            <textarea id="stock-codes" class="cute-input h-48 font-mono text-sm border-purple-100 leading-relaxed bg-gray-50" placeholder="email1@test.com:pass1
+email2@test.com:pass2"></textarea>
                         </div>
                         <button onclick="submitAdminStock()" class="w-full bg-purple-600 text-white py-4 rounded-xl font-bold hover:bg-purple-700 transition shadow-lg">อัปเดตสต๊อก</button>
                     </div>
@@ -608,23 +626,6 @@
         let globalMessages = [];
         let productsCache = [];
 
-        // PWA Manifest Generation
-        const manifestObj = {
-            "name": "So Richard",
-            "short_name": "So Richard",
-            "description": "บริการปั๊มยอดโซเชียล ซื้อแอปพรีเมียม เติมเกม",
-            "start_url": window.location.href.split('?')[0],
-            "display": "standalone",
-            "background_color": "#FFF5F8",
-            "theme_color": "#FFB6C1",
-            "icons": [
-                { "src": "https://img1.pic.in.th/images/quality_restoration_25690316203510056.png", "sizes": "192x192", "type": "image/png" },
-                { "src": "https://img1.pic.in.th/images/quality_restoration_25690316203510056.png", "sizes": "512x512", "type": "image/png" }
-            ]
-        };
-        const manifestBlob = new Blob([JSON.stringify(manifestObj)], {type: 'application/manifest+json'});
-        document.getElementById('manifest-link').setAttribute('href', URL.createObjectURL(manifestBlob));
-
         async function fetchGAS(payload) {
             showModal('loading-modal');
             try {
@@ -669,6 +670,12 @@
             if(pageId === 'dashboard') loadDashboard();
             if(pageId === 'premium' || pageId === 'admin') loadProducts();
             if(pageId === 'smm') initializeSMM();
+            
+            // Render Recommended SMM in Guest Page specifically
+            if (pageId === 'guest' && !document.getElementById('guest-smm-grid').hasChildNodes()) {
+                loadGuestData();
+            }
+            
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }
 
@@ -691,6 +698,24 @@
                             <div class="text-xs text-gray-500 font-bold mb-2 uppercase tracking-wide bg-gray-50 px-2 py-1 rounded-md border border-gray-100">${p.category}</div>
                             <div class="font-extrabold text-gray-800 truncate w-full text-center mb-4 text-xl">${p.name}</div>
                             <button onclick="showModal('login-modal')" class="w-full bg-pink-50 text-pink-600 font-bold hover:bg-pink-100 py-3 rounded-2xl transition mt-auto">เข้าสู่ระบบเพื่อซื้อ</button>
+                        </div>`;
+                    });
+                }
+                
+                // Add SMM Data to Guest Page
+                const sGrid = document.getElementById('guest-smm-grid'); 
+                if (sGrid) {
+                    sGrid.innerHTML = '';
+                    res.smm.forEach(s => {
+                        sGrid.innerHTML += `
+                        <div onclick="showModal('login-modal')" class="cute-card p-5 border border-pink-50 flex items-center cursor-pointer hover:bg-purple-50 transition bounce-soft group shadow-sm">
+                            <div class="w-14 h-14 rounded-full bg-white shadow-md border border-purple-100 flex items-center justify-center text-purple-400 text-3xl mr-4 shrink-0 group-hover:text-purple-600 transition">
+                                <i class="fa-brands ${s.icon}"></i>
+                            </div>
+                            <div class="flex-1">
+                                <div class="font-bold text-gray-800 text-base mb-1">${s.name}</div>
+                                <div class="text-xs text-purple-500 font-bold bg-purple-50 inline-block px-2 py-1 rounded-md">${s.price}</div>
+                            </div>
                         </div>`;
                     });
                 }
@@ -809,7 +834,7 @@
             reader.onload = async function() { const res = await fetchGAS({ action: 'topup', username: currentUser.username, amount: amt, ref_code: ref, file: reader.result }); if(res && res.status === 'success') { closeAllModals(); showAlert('ส่งหลักฐานสำเร็จ!', res.message, 'success'); document.getElementById('topup-amount').value=''; document.getElementById('topup-ref').value=''; document.getElementById('topup-file').value=''; } else if(res) showAlert('ผิดพลาด', res.message, 'error'); }; reader.readAsDataURL(file);
         }
 
-        // --- SMM System ---
+        // --- SMM System with Dynamic Custom Comments ---
         async function initializeSMM() {
             if(!smmDataCache) {
                 const res = await fetchGAS({ action: 'get_smm' });
@@ -865,7 +890,6 @@
                 const opt = sel.options[sel.selectedIndex]; 
                 const name = String(opt.getAttribute('data-name')).toLowerCase();
                 
-                // แสดงช่องคอมเมนต์เมื่อเป็นบริการความคิดเห็น
                 const isCustom = name.includes('กำหนดเอง') || name.includes('คอมเมนต์') || name.includes('ความคิดเห็น');
 
                 if (isCustom) {
