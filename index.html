@@ -11,16 +11,7 @@
     <meta name="application-name" content="So Richard">
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="theme-color" content="#FFB6C1">
-    
     <link rel="apple-touch-icon" href="https://img1.pic.in.th/images/quality_restoration_25690316203510056.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="https://img1.pic.in.th/images/quality_restoration_25690316203510056.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="https://img1.pic.in.th/images/quality_restoration_25690316203510056.png">
-    <link rel="apple-touch-icon" sizes="167x167" href="https://img1.pic.in.th/images/quality_restoration_25690316203510056.png">
-    
-    <link rel="icon" type="image/png" href="https://img1.pic.in.th/images/quality_restoration_25690316203510056.png">
-    <link rel="shortcut icon" href="https://img1.pic.in.th/images/quality_restoration_25690316203510056.png">
-
-    <link rel="manifest" id="manifest-link">
     
     <meta property="og:title" content="So Richard | บริการพรีเมียม">
     <meta property="og:description" content="บริการปั๊มยอดโซเชียล ซื้อแอปพรีเมียม เติมเกม ระบบอัตโนมัติ 24 ชั่วโมง ราคาถูกที่สุด">
@@ -43,12 +34,12 @@
             -webkit-tap-highlight-color: transparent;
         }
         
-        .fade-in { animation: fadeIn 0.5s ease-out; }
+        .fade-in { animation: fadeIn 0.4s ease-out; }
         @keyframes fadeIn { from { opacity: 0; transform: translateY(15px); } to { opacity: 1; transform: translateY(0); } }
-        .slide-up { animation: slideUp 0.4s cubic-bezier(0.16, 1, 0.3, 1); }
+        .slide-up { animation: slideUp 0.5s cubic-bezier(0.16, 1, 0.3, 1); }
         @keyframes slideUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
         .bounce-soft { transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); }
-        .bounce-soft:hover { transform: translateY(-5px); box-shadow: 0 10px 25px rgba(255, 182, 193, 0.4); }
+        .bounce-soft:hover { transform: translateY(-5px); box-shadow: 0 10px 25px rgba(255, 182, 193, 0.3); }
         
         .hidden { display: none !important; }
         
@@ -215,11 +206,11 @@
                     </div>
                 </div>
 
-                <div class="cute-card p-6 flex flex-col justify-between cursor-pointer group bounce-soft bg-gradient-to-br from-indigo-50 to-blue-50 border-0 shadow-md">
-                    <div class="w-12 h-12 bg-white rounded-xl flex items-center justify-center text-[#5865F2] text-3xl mb-4 shadow-sm group-hover:scale-110 transition"><i class="fa-brands fa-discord"></i></div>
+                <div onclick="window.open('https://lin.ee/5StecOd', '_blank')" class="cute-card p-6 flex flex-col justify-between cursor-pointer group bounce-soft bg-gradient-to-br from-green-50 to-emerald-50 border-0 shadow-md">
+                    <div class="w-12 h-12 bg-white rounded-xl flex items-center justify-center text-[#00B900] text-3xl mb-4 shadow-sm group-hover:scale-110 transition"><i class="fa-brands fa-line"></i></div>
                     <div>
-                        <div class="text-xl font-bold text-indigo-800 mb-1">ติดต่อแอดมิน</div>
-                        <div class="text-sm text-indigo-600/80 font-medium">ผ่านช่องทาง Discord</div>
+                        <div class="text-xl font-bold text-green-800 mb-1">ติดต่อแอดมิน</div>
+                        <div class="text-sm text-green-600/80 font-medium">ผ่านช่องทาง LINE</div>
                     </div>
                 </div>
             </div>
@@ -326,7 +317,8 @@
 
                                 <div id="smm-comments-container" class="hidden">
                                     <label class="block text-sm text-gray-500 font-bold mb-2 ml-1">ข้อความคอมเมนต์ <span class="text-pink-500 font-normal">(1 บรรทัด = 1 จำนวน)</span></label>
-                                    <textarea id="smm-comments" rows="4" class="cute-input font-medium leading-relaxed" placeholder="พิมพ์ข้อความที่นี่...&#10;ข้อความที่สอง..." oninput="calculateSMMPrice()"></textarea>
+                                    <textarea id="smm-comments" rows="4" class="cute-input font-medium leading-relaxed" placeholder="พิมพ์ข้อความที่นี่...
+ข้อความที่สอง..." oninput="calculateSMMPrice()"></textarea>
                                 </div>
 
                                 <div class="grid grid-cols-2 gap-6">
@@ -608,7 +600,7 @@
     </div>
 
     <script>
-        // *** 🔴 วาง URL ของ Google Apps Script ของคุณที่นี่ 🔴 ***
+        // *** 🔴 สำคัญ: นำ URL ของ Apps Script มาวางตรงนี้ ***
         const API_URL = "https://script.google.com/macros/s/AKfycbyfAlBgDpUAc-EDrUAu1nF2-ffZh39un5aTA6uTLJ9lCzykTUm59jEW_7u3AX7slqCC/exec"; 
         
         let currentUser = null;
@@ -817,7 +809,7 @@
             reader.onload = async function() { const res = await fetchGAS({ action: 'topup', username: currentUser.username, amount: amt, ref_code: ref, file: reader.result }); if(res && res.status === 'success') { closeAllModals(); showAlert('ส่งหลักฐานสำเร็จ!', res.message, 'success'); document.getElementById('topup-amount').value=''; document.getElementById('topup-ref').value=''; document.getElementById('topup-file').value=''; } else if(res) showAlert('ผิดพลาด', res.message, 'error'); }; reader.readAsDataURL(file);
         }
 
-        // --- SMM System with Dynamic Custom Comments ---
+        // --- SMM System ---
         async function initializeSMM() {
             if(!smmDataCache) {
                 const res = await fetchGAS({ action: 'get_smm' });
@@ -873,7 +865,7 @@
                 const opt = sel.options[sel.selectedIndex]; 
                 const name = String(opt.getAttribute('data-name')).toLowerCase();
                 
-                // ตรวจสอบบริการ "คอมเมนต์"
+                // แสดงช่องคอมเมนต์เมื่อเป็นบริการความคิดเห็น
                 const isCustom = name.includes('กำหนดเอง') || name.includes('คอมเมนต์') || name.includes('ความคิดเห็น');
 
                 if (isCustom) {
