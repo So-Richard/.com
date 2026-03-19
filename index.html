@@ -16,7 +16,6 @@
     <link rel="apple-touch-icon" sizes="152x152" href="https://img1.pic.in.th/images/quality_restoration_25690316203510056.png">
     <link rel="apple-touch-icon" sizes="180x180" href="https://img1.pic.in.th/images/quality_restoration_25690316203510056.png">
     <link rel="apple-touch-icon" sizes="167x167" href="https://img1.pic.in.th/images/quality_restoration_25690316203510056.png">
-    
     <link rel="icon" type="image/png" href="https://img1.pic.in.th/images/quality_restoration_25690316203510056.png">
     <link rel="shortcut icon" href="https://img1.pic.in.th/images/quality_restoration_25690316203510056.png">
     <link rel="manifest" id="manifest-link">
@@ -44,8 +43,10 @@
         
         .fade-in { animation: fadeIn 0.5s ease-out; }
         @keyframes fadeIn { from { opacity: 0; transform: translateY(15px); } to { opacity: 1; transform: translateY(0); } }
-        .slide-up { animation: slideUp 0.5s cubic-bezier(0.16, 1, 0.3, 1); }
+        
+        .slide-up { animation: slideUp 0.4s cubic-bezier(0.16, 1, 0.3, 1); }
         @keyframes slideUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+        
         .bounce-soft { transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); }
         .bounce-soft:hover { transform: translateY(-5px); box-shadow: 0 10px 25px rgba(255, 182, 193, 0.3); }
         
@@ -55,25 +56,65 @@
         ::-webkit-scrollbar-track { background: #FFF0F5; border-radius: 10px; }
         ::-webkit-scrollbar-thumb { background: #FFB6C1; border-radius: 10px; }
         
-        .cute-card { background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px); border: 2px solid #FFF0F5; border-radius: 1.5rem; box-shadow: 0 4px 20px rgba(255, 182, 193, 0.15); }
-        .cute-input { width: 100%; background: #FFF; border: 2px solid #FFE4E1; border-radius: 1rem; padding: 0.875rem 1.25rem; outline: none; transition: all 0.3s; font-weight: 500; color: #4A4A4A; }
+        .cute-card { 
+            background: rgba(255, 255, 255, 0.95); 
+            backdrop-filter: blur(10px); 
+            border: 2px solid #FFF0F5; 
+            border-radius: 1.5rem; 
+            box-shadow: 0 4px 20px rgba(255, 182, 193, 0.15); 
+        }
+        
+        .cute-input { 
+            width: 100%; 
+            background: #FFF; 
+            border: 2px solid #FFE4E1; 
+            border-radius: 1rem; 
+            padding: 0.875rem 1.25rem; 
+            outline: none; 
+            transition: all 0.3s; 
+            font-weight: 500; 
+            color: #4A4A4A; 
+        }
         .cute-input:focus { border-color: #FF69B4; box-shadow: 0 0 0 4px rgba(255, 105, 180, 0.1); }
         
-        .cute-select-wrapper { display: flex; align-items: center; background: #FFF; border: 2px solid #FFE4E1; border-radius: 1rem; padding: 0.5rem; transition: all 0.3s; }
+        .cute-select-wrapper { 
+            display: flex; 
+            align-items: center; 
+            background: #FFF; 
+            border: 2px solid #FFE4E1; 
+            border-radius: 1rem; 
+            padding: 0.5rem; 
+            transition: all 0.3s; 
+        }
         .cute-select-wrapper:focus-within { border-color: #FF69B4; box-shadow: 0 0 0 4px rgba(255, 105, 180, 0.1); }
-        .cute-select-wrapper select { width: 100%; background: transparent; border: none; outline: none; padding: 0.5rem; font-weight: 600; color: #4A4A4A; cursor: pointer; }
+        .cute-select-wrapper select { 
+            width: 100%; background: transparent; border: none; outline: none; 
+            padding: 0.5rem; font-weight: 600; color: #4A4A4A; cursor: pointer; 
+        }
 
-        .btn-pink { background: linear-gradient(135deg, #FF69B4 0%, #FF1493 100%); color: white; border-radius: 999px; font-weight: 600; transition: all 0.3s; box-shadow: 0 4px 15px rgba(255, 105, 180, 0.3); border: none; cursor: pointer; }
+        .btn-pink { 
+            background: linear-gradient(135deg, #FF69B4 0%, #FF1493 100%); 
+            color: white; border-radius: 999px; font-weight: 600; 
+            transition: all 0.3s; box-shadow: 0 4px 15px rgba(255, 105, 180, 0.3); border: none; cursor: pointer; 
+        }
         .btn-pink:hover { transform: translateY(-2px); box-shadow: 0 6px 25px rgba(255, 105, 180, 0.5); }
         
-        .step-badge { display: inline-flex; align-items: center; justify-content: center; width: 28px; height: 28px; background-color: #FF69B4; color: white; border-radius: 50%; font-weight: bold; font-size: 0.875rem; margin-right: 0.5rem; box-shadow: 0 2px 5px rgba(255, 105, 180, 0.3); }
-        .admin-tab { display: none; } .admin-tab.active { display: block; animation: fadeIn 0.3s; }
+        .step-badge { 
+            display: inline-flex; align-items: center; justify-content: center; 
+            width: 28px; height: 28px; background-color: #FF69B4; color: white; 
+            border-radius: 50%; font-weight: bold; font-size: 0.875rem; 
+            margin-right: 0.5rem; box-shadow: 0 2px 5px rgba(255, 105, 180, 0.3); 
+        }
+        
+        .admin-tab { display: none; } 
+        .admin-tab.active { display: block; animation: fadeIn 0.3s; }
     </style>
 </head>
 <body>
 
     <nav class="bg-white/95 backdrop-blur-md sticky top-0 z-50 border-b border-pink-100 shadow-sm">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between h-20 items-center">
+            
             <div class="flex items-center space-x-3 cursor-pointer group" onclick="navigate('guest')">
                 <div class="w-12 h-12 rounded-full flex items-center justify-center bg-white border border-pink-200 group-hover:border-pink-400 transition overflow-hidden shadow-sm">
                     <img src="https://img1.pic.in.th/images/quality_restoration_25690316203510056.png" alt="Logo" class="w-full h-full object-cover">
@@ -84,7 +125,9 @@
             </div>
             
             <div id="nav-guest" class="flex space-x-3 items-center">
-                <button onclick="showModal('login-modal')" class="text-pink-500 font-bold px-4 py-2 hover:bg-pink-50 rounded-full transition"><i class="fa-solid fa-right-to-bracket mr-2"></i> เข้าสู่ระบบ</button>
+                <button onclick="showModal('login-modal')" class="text-pink-500 font-bold px-4 py-2 hover:bg-pink-50 rounded-full transition">
+                    <i class="fa-solid fa-right-to-bracket mr-2"></i> เข้าสู่ระบบ
+                </button>
                 <button onclick="showModal('register-modal')" class="btn-pink px-6 py-2.5 hidden sm:flex items-center">
                     <i class="fa-solid fa-user-plus mr-2"></i> สมัครสมาชิก
                 </button>
@@ -93,7 +136,8 @@
             <div id="nav-user" class="hidden flex items-center space-x-4">
                 <div class="bg-gradient-to-r from-pink-50 to-white border border-pink-100 px-5 py-2 rounded-full font-bold text-pink-600 shadow-sm flex items-center">
                     <i class="fa-solid fa-wallet text-pink-400 mr-2"></i>
-                    <span id="nav-credit" class="text-lg">0.00</span> <span class="text-sm text-gray-500 ml-1">THB</span>
+                    <span id="nav-credit" class="text-lg">0.00</span> 
+                    <span class="text-sm text-gray-500 ml-1">THB</span>
                 </div>
                 <button onclick="logout()" class="w-12 h-12 rounded-full bg-white border border-gray-100 text-gray-400 hover:text-red-500 hover:bg-red-50 hover:border-red-100 transition shadow-sm flex items-center justify-center">
                     <i class="fa-solid fa-arrow-right-from-bracket text-lg"></i>
@@ -142,18 +186,24 @@
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6 w-full mb-16 max-w-5xl mx-auto slide-up">
-                <div class="cute-card p-8 text-center flex flex-col items-center justify-center group relative overflow-hidden border-t-4 border-blue-400">
-                    <div class="w-16 h-16 bg-blue-50 rounded-2xl flex items-center justify-center text-blue-500 text-3xl mb-4 group-hover:scale-110 transition"><i class="fa-solid fa-users"></i></div>
+                <div class="cute-card p-8 text-center flex flex-col items-center justify-center group relative overflow-hidden">
+                    <div class="w-16 h-16 bg-blue-50 rounded-2xl flex items-center justify-center text-blue-500 text-3xl mb-4 group-hover:scale-110 transition">
+                        <i class="fa-solid fa-users"></i>
+                    </div>
                     <div class="text-gray-500 font-semibold mb-1">สมาชิกทั้งหมด</div>
                     <div class="text-4xl font-bold text-gray-800" id="guest-stat-users">0</div>
                 </div>
-                <div class="cute-card p-8 text-center flex flex-col items-center justify-center group relative overflow-hidden border-t-4 border-green-400">
-                    <div class="w-16 h-16 bg-green-50 rounded-2xl flex items-center justify-center text-green-500 text-3xl mb-4 group-hover:scale-110 transition"><i class="fa-solid fa-money-bill-trend-up"></i></div>
+                <div class="cute-card p-8 text-center flex flex-col items-center justify-center group relative overflow-hidden border-t-4 border-t-green-400">
+                    <div class="w-16 h-16 bg-green-50 rounded-2xl flex items-center justify-center text-green-500 text-3xl mb-4 group-hover:scale-110 transition">
+                        <i class="fa-solid fa-money-bill-trend-up"></i>
+                    </div>
                     <div class="text-gray-500 font-semibold mb-1">ยอดเติมเงินรวม (บาท)</div>
                     <div class="text-4xl font-bold text-gray-800" id="guest-stat-topup">0</div>
                 </div>
-                <div class="cute-card p-8 text-center flex flex-col items-center justify-center group relative overflow-hidden border-t-4 border-purple-400">
-                    <div class="w-16 h-16 bg-purple-50 rounded-2xl flex items-center justify-center text-purple-500 text-3xl mb-4 group-hover:scale-110 transition"><i class="fa-solid fa-box-open"></i></div>
+                <div class="cute-card p-8 text-center flex flex-col items-center justify-center group relative overflow-hidden border-t-4 border-t-purple-400">
+                    <div class="w-16 h-16 bg-purple-50 rounded-2xl flex items-center justify-center text-purple-500 text-3xl mb-4 group-hover:scale-110 transition">
+                        <i class="fa-solid fa-box-open"></i>
+                    </div>
                     <div class="text-gray-500 font-semibold mb-1">ออเดอร์สำเร็จ</div>
                     <div class="text-4xl font-bold text-gray-800" id="guest-stat-orders">0</div>
                 </div>
@@ -164,8 +214,7 @@
                     <i class="fa-solid fa-star text-yellow-400 text-2xl mr-3"></i>
                     <h2 class="text-3xl font-bold text-gray-800">สินค้าพรีเมียมแนะนำ</h2>
                 </div>
-                <div class="grid grid-cols-2 md:grid-cols-4 gap-6" id="guest-products-grid">
-                    </div>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-6" id="guest-products-grid"></div>
             </div>
 
             <div class="w-full mb-16 slide-up">
@@ -173,21 +222,24 @@
                     <i class="fa-solid fa-bolt text-purple-400 text-2xl mr-3"></i>
                     <h2 class="text-3xl font-bold text-gray-800">บริการเพิ่มยอดโซเชียล</h2>
                 </div>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6" id="guest-smm-grid">
-                    </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6" id="guest-smm-grid"></div>
             </div>
         </div>
 
         <div id="page-dashboard" class="page hidden fade-in">
             <div class="cute-card p-8 mb-8 bg-gradient-to-br from-pink-50 to-white relative overflow-hidden border-0 shadow-md">
-                <div class="absolute right-0 top-0 opacity-5 text-[10rem] text-pink-300 pointer-events-none -mt-10 -mr-10"><i class="fa-solid fa-crown"></i></div>
+                <div class="absolute right-0 top-0 opacity-5 text-[10rem] text-pink-300 pointer-events-none -mt-10 -mr-10">
+                    <i class="fa-solid fa-crown"></i>
+                </div>
                 <div class="flex items-center relative z-10">
                     <div class="w-20 h-20 bg-white rounded-full flex items-center justify-center text-pink-400 text-4xl border-4 border-pink-100 shadow-sm shrink-0">
                         <i class="fa-regular fa-face-smile"></i>
                     </div>
                     <div class="ml-6">
                         <h2 class="text-3xl font-extrabold text-gray-800 mb-1">สวัสดีคุณ, <span id="dash-username" class="text-pink-500">User</span></h2>
-                        <p class="text-gray-500 font-medium flex items-center"><i class="fa-solid fa-circle text-green-400 text-xs mr-2"></i> ระบบพร้อมให้บริการ 24 ชม.</p>
+                        <p class="text-gray-500 font-medium flex items-center">
+                            <i class="fa-solid fa-circle text-green-400 text-xs mr-2"></i> ระบบพร้อมให้บริการ 24 ชม.
+                        </p>
                     </div>
                 </div>
             </div>
@@ -234,7 +286,9 @@
 
             <div class="cute-card p-6">
                 <div class="flex items-center justify-between mb-6">
-                    <h3 class="text-xl font-bold text-gray-800 flex items-center"><i class="fa-solid fa-list-ul text-pink-400 mr-3 text-2xl"></i> ออเดอร์ล่าสุด</h3>
+                    <h3 class="text-xl font-bold text-gray-800 flex items-center">
+                        <i class="fa-solid fa-list-ul text-pink-400 mr-3 text-2xl"></i> ออเดอร์ล่าสุด
+                    </h3>
                 </div>
                 <div class="overflow-x-auto">
                     <table class="w-full text-left min-w-[700px]">
@@ -254,7 +308,9 @@
 
         <div id="page-premium" class="page hidden fade-in">
             <div class="text-center mb-10">
-                <span class="bg-pink-100 text-pink-600 font-bold px-4 py-1.5 rounded-full text-sm mb-3 inline-block"><i class="fa-solid fa-store mr-1"></i> Store</span>
+                <span class="bg-pink-100 text-pink-600 font-bold px-4 py-1.5 rounded-full text-sm mb-3 inline-block">
+                    <i class="fa-solid fa-store mr-1"></i> Store
+                </span>
                 <h2 class="text-4xl font-extrabold text-gray-800">ร้านค้าพรีเมียม & เติมเกม</h2>
             </div>
             <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-6" id="product-grid"></div>
@@ -262,7 +318,9 @@
 
         <div id="page-smm" class="page hidden fade-in">
             <div class="text-center mb-10">
-                <span class="bg-purple-100 text-purple-600 font-bold px-4 py-1.5 rounded-full text-sm mb-3 inline-block"><i class="fa-solid fa-bolt mr-1"></i> Boost</span>
+                <span class="bg-purple-100 text-purple-600 font-bold px-4 py-1.5 rounded-full text-sm mb-3 inline-block">
+                    <i class="fa-solid fa-bolt mr-1"></i> Boost
+                </span>
                 <h2 class="text-4xl font-extrabold text-gray-800">ระบบเพิ่มยอดโซเชียล</h2>
                 <p class="text-gray-500 mt-2">ทำงานอัตโนมัติ รวดเร็ว ทันใจ</p>
             </div>
@@ -270,6 +328,7 @@
             <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
                 <div class="lg:col-span-2 cute-card p-8 shadow-xl border-t-4 border-t-purple-400 relative">
                     <div class="space-y-8">
+                        
                         <div class="bg-gray-50 p-6 rounded-[1.5rem] border border-gray-100">
                             <label class="flex items-center text-gray-800 font-bold mb-4 text-lg">
                                 <span class="step-badge">1</span> เลือกแพลตฟอร์ม
@@ -294,7 +353,7 @@
                                 
                                 <div class="cute-select-wrapper bg-pink-50 border-pink-200">
                                     <div class="w-10 h-10 bg-white rounded-xl flex items-center justify-center text-pink-500 shrink-0 shadow-sm"><i class="fa-solid fa-check-circle text-lg"></i></div>
-                                    <select id="smm-service" onchange="updateSMMDetails()" class="text-pink-700"><option value="">-- กรุณาเลือกหมวดหมู่ก่อน --</option></select>
+                                    <select id="smm-service" onchange="updateSMMDetails()" class="text-pink-700 font-bold"><option value="">-- กรุณาเลือกหมวดหมู่ก่อน --</option></select>
                                 </div>
                             </div>
                             
@@ -311,12 +370,8 @@
                                     </div>
                                     <p id="smm-desc" class="text-xs text-gray-500 mb-4 leading-relaxed bg-gray-50 p-2.5 rounded-lg border border-gray-100"></p>
                                     <div class="flex items-center space-x-3 text-xs">
-                                        <div class="border border-gray-200 px-3 py-1.5 rounded-lg font-bold text-gray-600 bg-white shadow-sm">
-                                            <i class="fa-solid fa-arrow-down-short-wide text-gray-400 mr-1"></i> ขั้นต่ำ: <span id="smm-min" class="text-gray-800">0</span>
-                                        </div>
-                                        <div class="border border-gray-200 px-3 py-1.5 rounded-lg font-bold text-gray-600 bg-white shadow-sm">
-                                            <i class="fa-solid fa-arrow-up-wide-short text-gray-400 mr-1"></i> สูงสุด: <span id="smm-max" class="text-gray-800">0</span>
-                                        </div>
+                                        <div class="border border-gray-200 px-3 py-1.5 rounded-lg font-bold text-gray-600 bg-white shadow-sm"><i class="fa-solid fa-arrow-down-short-wide text-gray-400 mr-1"></i> ขั้นต่ำ: <span id="smm-min" class="text-gray-800">0</span></div>
+                                        <div class="border border-gray-200 px-3 py-1.5 rounded-lg font-bold text-gray-600 bg-white shadow-sm"><i class="fa-solid fa-arrow-up-wide-short text-gray-400 mr-1"></i> สูงสุด: <span id="smm-max" class="text-gray-800">0</span></div>
                                     </div>
                                 </div>
                             </div>
@@ -334,8 +389,7 @@
 
                                 <div id="smm-comments-container" class="hidden">
                                     <label class="block text-sm text-gray-500 font-bold mb-2 ml-1">ข้อความคอมเมนต์ <span class="text-pink-500 font-normal">(1 บรรทัด = 1 จำนวน)</span></label>
-                                    <textarea id="smm-comments" rows="4" class="cute-input font-medium leading-relaxed" placeholder="พิมพ์ข้อความที่นี่...
-ข้อความที่สอง..." oninput="calculateSMMPrice()"></textarea>
+                                    <textarea id="smm-comments" rows="4" class="cute-input font-medium leading-relaxed" placeholder="พิมพ์ข้อความที่นี่..." oninput="calculateSMMPrice()"></textarea>
                                 </div>
 
                                 <div class="grid grid-cols-2 gap-6">
@@ -366,9 +420,18 @@
                         </div>
                         <h3 class="font-bold text-gray-800 mb-3 text-lg">ข้อควรระวังก่อนสั่ง</h3>
                         <ul class="text-sm text-gray-600 space-y-4">
-                            <li class="flex items-start"><div class="text-green-500 mt-1 mr-3"><i class="fa-solid fa-check"></i></div><span>ตั้งโปรไฟล์/โพสต์ เป็น <b class="text-gray-800">"สาธารณะ" (Public)</b> เท่านั้น</span></li>
-                            <li class="flex items-start"><div class="text-red-500 mt-1 mr-3"><i class="fa-solid fa-xmark"></i></div><span><b>ห้ามเปลี่ยนชื่อผู้ใช้ (Username)</b> ในขณะที่ออเดอร์กำลังดำเนินการ</span></li>
-                            <li class="flex items-start"><div class="text-red-500 mt-1 mr-3"><i class="fa-solid fa-xmark"></i></div><span><b>ห้ามสั่งลิงก์เดิมซ้ำ</b> หากออเดอร์ก่อนหน้าของลิงก์นั้นยังไม่เสร็จสมบูรณ์</span></li>
+                            <li class="flex items-start">
+                                <div class="text-green-500 mt-1 mr-3"><i class="fa-solid fa-check"></i></div>
+                                <span>ตั้งโปรไฟล์/โพสต์ เป็น <b class="text-gray-800">"สาธารณะ" (Public)</b> เท่านั้น</span>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="text-red-500 mt-1 mr-3"><i class="fa-solid fa-xmark"></i></div>
+                                <span><b>ห้ามเปลี่ยนชื่อผู้ใช้ (Username)</b> ในขณะที่ออเดอร์กำลังดำเนินการ</span>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="text-red-500 mt-1 mr-3"><i class="fa-solid fa-xmark"></i></div>
+                                <span><b>ห้ามสั่งลิงก์เดิมซ้ำ</b> หากออเดอร์ก่อนหน้าของลิงก์นั้นยังไม่เสร็จสมบูรณ์</span>
+                            </li>
                         </ul>
                     </div>
                     
@@ -377,7 +440,9 @@
                             <i class="fa-solid fa-circle-question text-pink-400 text-xl mr-2"></i>
                             <h3 class="font-bold text-pink-700">เงื่อนไขการคืนเงิน</h3>
                         </div>
-                        <p class="text-xs text-pink-600/80 leading-relaxed font-medium">ระบบทำงานอัตโนมัติ หากใส่ลิงก์ผิดรูปแบบ บัญชีเป็นส่วนตัว หรือลบโพสต์ทิ้ง ระบบจะ <b class="text-pink-600">ไม่สามารถยกเลิกหรือคืนเงินได้</b> ในทุกกรณี โปรดตรวจสอบลิงก์ให้แน่ใจก่อนกดสั่งซื้อ</p>
+                        <p class="text-xs text-pink-600/80 leading-relaxed font-medium">
+                            ระบบทำงานอัตโนมัติ หากใส่ลิงก์ผิดรูปแบบ บัญชีเป็นส่วนตัว หรือลบโพสต์ทิ้ง ระบบจะ <b class="text-pink-600">ไม่สามารถยกเลิกหรือคืนเงินได้</b> ในทุกกรณี โปรดตรวจสอบลิงก์ให้แน่ใจก่อนกดสั่งซื้อ
+                        </p>
                     </div>
                 </div>
             </div>
@@ -431,8 +496,7 @@
                         </div>
                         <div>
                             <label class="block text-sm text-gray-500 mb-2 font-bold">ใส่รหัสสินค้า (1 บรรทัด = 1 รหัส)</label>
-                            <textarea id="stock-codes" class="cute-input h-48 font-mono text-sm border-purple-100 leading-relaxed bg-gray-50" placeholder="email1@test.com:pass1
-email2@test.com:pass2"></textarea>
+                            <textarea id="stock-codes" class="cute-input h-48 font-mono text-sm border-purple-100 leading-relaxed bg-gray-50" placeholder="email1@test.com:pass1"></textarea>
                         </div>
                         <button onclick="submitAdminStock()" class="w-full bg-purple-600 text-white py-4 rounded-xl font-bold hover:bg-purple-700 transition shadow-lg">อัปเดตสต๊อก</button>
                     </div>
@@ -593,7 +657,7 @@ email2@test.com:pass2"></textarea>
             
             <div class="bg-green-50 p-5 rounded-2xl mb-8 flex flex-col items-center border border-green-100 shadow-inner">
                 <p class="text-sm text-gray-600 font-bold mb-3">สแกน QR Code เพื่อชำระเงิน</p>
-                <img src="https://img2.pic.in.th/IMG_37395b590b404f28dea2.jpeg" alt="QR Code" class="w-48 h-48 rounded-xl shadow-md border-4 border-white mb-3 object-cover">
+                <img src="https://img5.pic.in.th/file/secure-sv1/-629_20260222132327.png" alt="QR Code" class="w-48 h-48 rounded-xl shadow-md border-4 border-white mb-3 object-cover">
                 <p class="text-xs text-gray-500 bg-white inline-block px-4 py-1.5 rounded-full font-bold shadow-sm">รองรับทุกธนาคาร</p>
             </div>
 
@@ -618,67 +682,129 @@ email2@test.com:pass2"></textarea>
     </div>
 
     <script>
-        // *** 🔴 สำคัญ: นำ URL ของ Apps Script มาวางตรงนี้ ***
+        // *** 🔴 สำคัญ: วาง URL ของ Google Apps Script ที่ช่องนี้ 🔴 ***
         const API_URL = "https://script.google.com/macros/s/AKfycbyfAlBgDpUAc-EDrUAu1nF2-ffZh39un5aTA6uTLJ9lCzykTUm59jEW_7u3AX7slqCC/exec"; 
         
         let currentUser = null;
         let smmDataCache = null; 
         let globalMessages = [];
         let productsCache = [];
+        let syncInterval; // ตัวแปรสำหรับ Background Polling ทุก 5 วิ
 
+        // ----- PWA Setup -----
+        const manifestObj = { 
+            "name": "So Richard", 
+            "short_name": "So Richard", 
+            "description": "บริการปั๊มยอดโซเชียล ซื้อแอปพรีเมียม เติมเกม", 
+            "start_url": window.location.href.split('?')[0], 
+            "display": "standalone", 
+            "background_color": "#FFF5F8", 
+            "theme_color": "#FFB6C1", 
+            "icons": [ 
+                { "src": "https://img1.pic.in.th/images/quality_restoration_25690316203510056.png", "sizes": "192x192", "type": "image/png" }, 
+                { "src": "https://img1.pic.in.th/images/quality_restoration_25690316203510056.png", "sizes": "512x512", "type": "image/png" } 
+            ] 
+        };
+        const manifestBlob = new Blob([JSON.stringify(manifestObj)], {type: 'application/manifest+json'});
+        document.getElementById('manifest-link').setAttribute('href', URL.createObjectURL(manifestBlob));
+
+        // ----- Fetch Helpers -----
         async function fetchGAS(payload) {
             showModal('loading-modal');
             try {
                 const response = await fetch(API_URL, { method: 'POST', body: JSON.stringify(payload) });
                 const result = await response.json();
-                hideModal('loading-modal'); return result;
-            } catch (err) { hideModal('loading-modal'); showAlert('ขัดข้อง', 'ระบบขัดข้อง กรุณาลองใหม่', 'error'); return null; }
+                hideModal('loading-modal'); 
+                return result;
+            } catch (err) { 
+                hideModal('loading-modal'); 
+                showAlert('ขัดข้อง', 'ระบบขัดข้อง กรุณาลองใหม่', 'error'); 
+                return null; 
+            }
+        }
+        
+        // ฟังก์ชันโหลดข้อมูลเงียบๆ ไม่โชว์ Modal หมุนๆ (สำหรับ Background Polling)
+        async function fetchGASBackground(payload) {
+            try {
+                const response = await fetch(API_URL, { method: 'POST', body: JSON.stringify(payload) });
+                return await response.json();
+            } catch (err) { 
+                return null; 
+            }
         }
 
-        function showModal(id) { document.getElementById(id).classList.remove('hidden'); }
-        function hideModal(id) { document.getElementById(id).classList.add('hidden'); }
-        function closeAllModals() { document.querySelectorAll('.modal-container').forEach(el => el.classList.add('hidden')); hideModal('loading-modal'); }
+        // ----- UI Controls -----
+        function showModal(id) { 
+            document.getElementById(id).classList.remove('hidden'); 
+        }
+        function hideModal(id) { 
+            document.getElementById(id).classList.add('hidden'); 
+        }
+        function closeAllModals() { 
+            document.querySelectorAll('.modal-container').forEach(el => el.classList.add('hidden')); 
+            hideModal('loading-modal'); 
+        }
         
         function showAlert(title, message, type='info') {
-            document.getElementById('alert-title').innerText = title; document.getElementById('alert-message').innerText = message;
+            document.getElementById('alert-title').innerText = title; 
+            document.getElementById('alert-message').innerText = message;
             const icon = document.getElementById('alert-icon');
-            if(type === 'error') icon.innerHTML = '<i class="fa-solid fa-circle-xmark text-red-500"></i>';
-            else if(type === 'success') icon.innerHTML = '<i class="fa-solid fa-circle-check text-green-500"></i>';
-            else icon.innerHTML = '<i class="fa-solid fa-bell text-pink-500"></i>';
+            if(type === 'error') {
+                icon.innerHTML = '<i class="fa-solid fa-circle-xmark text-red-500"></i>';
+            } else if(type === 'success') {
+                icon.innerHTML = '<i class="fa-solid fa-circle-check text-green-500"></i>';
+            } else {
+                icon.innerHTML = '<i class="fa-solid fa-bell text-pink-500"></i>';
+            }
             showModal('alert-modal');
         }
 
+        // ----- Navigation -----
         function navigate(pageId) {
             closeAllModals(); 
+            
+            // Guards
             if (!currentUser && pageId !== 'guest') pageId = 'guest'; 
             else if (currentUser && pageId === 'guest') pageId = 'dashboard';
 
-            document.querySelectorAll('.page').forEach(el => { el.classList.add('hidden'); el.classList.remove('flex', 'block'); });
+            // ซ่อนทุกหน้า
+            document.querySelectorAll('.page').forEach(el => { 
+                el.classList.add('hidden'); 
+                el.classList.remove('flex', 'block'); 
+            });
+            
+            // แสดงหน้าเป้าหมาย
             const targetPage = document.getElementById('page-' + pageId);
             targetPage.classList.remove('hidden');
-            if(pageId === 'guest') targetPage.classList.add('flex'); else targetPage.classList.add('block');
+            if(pageId === 'guest') {
+                targetPage.classList.add('flex'); 
+            } else {
+                targetPage.classList.add('block');
+            }
             
+            // จัดการ Active Menu
             if (pageId !== 'guest') {
                 document.querySelectorAll('.menu-btn').forEach(btn => { 
                     btn.classList.remove('active', 'text-pink-600', 'bg-pink-100/80'); 
                     btn.classList.add('text-gray-500'); 
                 });
                 const act = document.querySelector(`.menu-btn[data-target="${pageId}"]`);
-                if(act) { act.classList.remove('text-gray-500'); act.classList.add('active', 'text-pink-600', 'bg-pink-100/80'); }
+                if(act) { 
+                    act.classList.remove('text-gray-500'); 
+                    act.classList.add('active', 'text-pink-600', 'bg-pink-100/80'); 
+                }
             }
 
+            // Load data
             if(pageId === 'dashboard') loadDashboard();
             if(pageId === 'premium' || pageId === 'admin') loadProducts();
             if(pageId === 'smm') initializeSMM();
-            
-            // Render Recommended SMM in Guest Page specifically
-            if (pageId === 'guest' && !document.getElementById('guest-smm-grid').hasChildNodes()) {
-                loadGuestData();
-            }
+            if(pageId === 'guest' && !document.getElementById('guest-smm-grid').hasChildNodes()) loadGuestData();
             
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }
 
+        // ----- Guest Data -----
         async function loadGuestData() {
             const res = await fetchGAS({ action: 'get_guest_data' });
             if(res && res.status === 'success') {
@@ -686,9 +812,11 @@ email2@test.com:pass2"></textarea>
                 document.getElementById('guest-stat-topup').innerText = res.stats.topup.toLocaleString();
                 document.getElementById('guest-stat-orders').innerText = res.stats.orders.toLocaleString();
 
-                const pGrid = document.getElementById('guest-products-grid'); pGrid.innerHTML = '';
-                if(res.products.length === 0) { pGrid.innerHTML = '<div class="col-span-full text-center text-gray-400 py-8 font-medium">กำลังเตรียมสินค้าเข้าคลังค่ะ...</div>'; }
-                else {
+                const pGrid = document.getElementById('guest-products-grid'); 
+                pGrid.innerHTML = '';
+                if(res.products.length === 0) { 
+                    pGrid.innerHTML = '<div class="col-span-full text-center text-gray-400 py-8 font-medium">กำลังเตรียมสินค้าเข้าคลังค่ะ...</div>'; 
+                } else {
                     res.products.forEach(p => {
                         let stockBadge = p.type === 'app' ? `<div class="absolute top-4 right-4 bg-pink-100 text-pink-600 text-xs font-bold px-3 py-1 rounded-full shadow-sm z-10 border border-pink-200">เหลือ ${p.stock} ชิ้น</div>` : '';
                         pGrid.innerHTML += `
@@ -697,12 +825,11 @@ email2@test.com:pass2"></textarea>
                             <img src="${p.image || 'https://via.placeholder.com/150'}" class="w-28 h-28 rounded-3xl mb-5 object-cover shadow-sm group-hover:scale-105 transition duration-300">
                             <div class="text-xs text-gray-500 font-bold mb-2 uppercase tracking-wide bg-gray-50 px-2 py-1 rounded-md border border-gray-100">${p.category}</div>
                             <div class="font-extrabold text-gray-800 truncate w-full text-center mb-4 text-xl">${p.name}</div>
-                            <button onclick="showModal('login-modal')" class="w-full bg-pink-50 text-pink-600 font-bold hover:bg-pink-100 py-3 rounded-2xl transition mt-auto">เข้าสู่ระบบเพื่อซื้อ</button>
+                            <button onclick="showModal('login-modal')" class="w-full bg-pink-50 text-pink-600 font-bold hover:bg-pink-100 py-3 rounded-2xl transition mt-auto shadow-sm">เข้าสู่ระบบเพื่อซื้อ</button>
                         </div>`;
                     });
                 }
                 
-                // Add SMM Data to Guest Page
                 const sGrid = document.getElementById('guest-smm-grid'); 
                 if (sGrid) {
                     sGrid.innerHTML = '';
@@ -722,6 +849,7 @@ email2@test.com:pass2"></textarea>
             }
         }
 
+        // ----- Auth -----
         function checkLoginState() {
             const saved = localStorage.getItem('imlady_session');
             if (saved) {
@@ -729,85 +857,182 @@ email2@test.com:pass2"></textarea>
                 document.getElementById('nav-guest').classList.add('hidden');
                 document.getElementById('nav-user').classList.remove('hidden');
                 document.getElementById('main-menu').classList.remove('hidden');
-                if(currentUser.role === 'admin') document.getElementById('menu-admin').classList.remove('hidden');
+                
+                if(currentUser.role === 'admin') {
+                    document.getElementById('menu-admin').classList.remove('hidden');
+                }
+                
                 document.getElementById('nav-credit').innerText = currentUser.credit.toFixed(2);
                 document.getElementById('dash-username').innerText = currentUser.username;
                 navigate('dashboard');
-                fetchInboxData();
+                
+                // 🟢 เริ่มต้น Background Polling ดึงข้อมูลทุก 5 วินาที
+                if(syncInterval) clearInterval(syncInterval);
+                syncInterval = setInterval(syncDashboardData, 5000); 
             } else {
                 logout(false);
                 loadGuestData();
             }
         }
 
-        function logout(r=true) { localStorage.removeItem('imlady_session'); currentUser = null; if(r) window.location.reload(); else navigate('guest'); }
+        function logout(reload = true) { 
+            localStorage.removeItem('imlady_session'); 
+            currentUser = null; 
+            if(syncInterval) clearInterval(syncInterval);
+            
+            if(reload) window.location.reload(); 
+            else navigate('guest'); 
+        }
 
         async function submitLogin() {
-            const u = document.getElementById('login-user').value, p = document.getElementById('login-pass').value;
+            const u = document.getElementById('login-user').value;
+            const p = document.getElementById('login-pass').value;
             if(!u || !p) return showAlert('ข้อมูลไม่ครบ', 'กรอกข้อมูลให้ครบนะคะ', 'error');
+            
             const res = await fetchGAS({ action: 'login', username: u, password: p });
-            if(res && res.status === 'success') { localStorage.setItem('imlady_session', JSON.stringify({username: res.user.username, credit: res.user.credit, role: res.user.role})); closeAllModals(); document.getElementById('login-user').value = ''; document.getElementById('login-pass').value = ''; checkLoginState(); }
-            else if(res) showAlert('ผิดพลาด', res.message, 'error');
+            if(res && res.status === 'success') { 
+                localStorage.setItem('imlady_session', JSON.stringify({
+                    username: res.user.username, 
+                    credit: res.user.credit, 
+                    role: res.user.role
+                })); 
+                closeAllModals(); 
+                document.getElementById('login-user').value = ''; 
+                document.getElementById('login-pass').value = ''; 
+                checkLoginState(); 
+            } else if(res) {
+                showAlert('ผิดพลาด', res.message, 'error');
+            }
         }
 
         async function submitRegister() {
-            const u=document.getElementById('reg-user').value, e=document.getElementById('reg-email').value, ph=document.getElementById('reg-phone').value, p=document.getElementById('reg-pass').value;
-            if(!u||!e||!ph||!p) return showAlert('ข้อมูลไม่ครบ', 'กรอกข้อมูลให้ครบนะคะ', 'error');
+            const u = document.getElementById('reg-user').value;
+            const e = document.getElementById('reg-email').value;
+            const ph = document.getElementById('reg-phone').value;
+            const p = document.getElementById('reg-pass').value;
+            if(!u || !e || !ph || !p) return showAlert('ข้อมูลไม่ครบ', 'กรอกข้อมูลให้ครบนะคะ', 'error');
+            
             const res = await fetchGAS({ action: 'register', username: u, email: e, phone: ph, password: p });
-            if(res && res.status === 'success') { closeAllModals(); showAlert('สำเร็จ!', res.message, 'success'); document.getElementById('reg-user').value=''; document.getElementById('reg-email').value=''; document.getElementById('reg-phone').value=''; document.getElementById('reg-pass').value=''; setTimeout(()=>showModal('login-modal'), 1500); }
-            else if(res) showAlert('ผิดพลาด', res.message, 'error');
+            if(res && res.status === 'success') { 
+                closeAllModals(); 
+                showAlert('สำเร็จ!', res.message, 'success'); 
+                document.getElementById('reg-user').value = ''; 
+                document.getElementById('reg-email').value = ''; 
+                document.getElementById('reg-phone').value = ''; 
+                document.getElementById('reg-pass').value = ''; 
+                setTimeout(()=>showModal('login-modal'), 1500); 
+            } else if(res) {
+                showAlert('ผิดพลาด', res.message, 'error');
+            }
+        }
+
+        // ----- Background Polling Logic (Load เร็ว สมูธ) -----
+        async function syncDashboardData() {
+            if (!currentUser) return;
+            const res = await fetchGASBackground({ action: 'get_dashboard', username: currentUser.username });
+            if (res && res.status === 'success') {
+                // Update Credit
+                document.getElementById('dash-credit').innerText = res.stats.balance.toFixed(2);
+                document.getElementById('nav-credit').innerText = res.stats.balance.toFixed(2);
+                currentUser.credit = res.stats.balance; 
+                localStorage.setItem('imlady_session', JSON.stringify(currentUser));
+                
+                // Update History Table smoothly (Check if HTML changed before rewriting)
+                const tbody = document.getElementById('history-table'); 
+                let newHTML = '';
+                if(res.history.length === 0) {
+                    newHTML = '<tr><td colspan="4" class="p-8 text-center text-gray-400 font-medium">ยังไม่มีประวัติการสั่งซื้อ เริ่มช้อปได้เลย!</td></tr>';
+                } else {
+                    res.history.forEach(h => {
+                        let stHtml = '';
+                        if(h.status.includes('สำเร็จ')) stHtml = `<span class="bg-green-100 text-green-700 px-3 py-1 rounded-md text-xs font-bold">${h.status}</span>`;
+                        else if(h.status.includes('ยกเลิก')) stHtml = `<span class="bg-red-100 text-red-700 px-3 py-1 rounded-md text-xs font-bold">${h.status}</span>`;
+                        else stHtml = `<span class="bg-yellow-100 text-yellow-700 px-3 py-1 rounded-md text-xs font-bold">${h.status}</span>`;
+                        
+                        newHTML += `<tr class="border-b border-gray-50 hover:bg-gray-50 transition"><td class="py-4 pl-2 font-bold text-gray-800">${h.detail}</td><td class="py-4 font-black text-pink-500">${h.price}฿</td><td class="py-4">${stHtml}</td><td class="py-4 text-xs text-gray-400 text-right pr-2">${h.date.split(' ')[0]}</td></tr>`;
+                    });
+                }
+                if(tbody.innerHTML !== newHTML) tbody.innerHTML = newHTML;
+                
+                // Sync Inbox Data
+                fetchInboxDataBackground(); 
+                
+                // Sync Full history if modal is open
+                if (!document.getElementById('history-modal').classList.contains('hidden')) {
+                    fetchFullHistoryBackground();
+                }
+            }
+        }
+        
+        async function fetchInboxDataBackground() {
+            if(!currentUser) return;
+            const res = await fetchGASBackground({ action: 'get_inbox', username: currentUser.username });
+            if(res && res.status === 'success') {
+                globalMessages = res.messages; 
+                const badge = document.getElementById('unread-badge');
+                if(res.unread > 0) { 
+                    badge.innerText = res.unread; 
+                    badge.classList.remove('hidden'); 
+                } else {
+                    badge.classList.add('hidden');
+                }
+                
+                // Update Inbox list if modal is open
+                const list = document.getElementById('inbox-list');
+                if(!document.getElementById('inbox-modal').classList.contains('hidden') && list) {
+                    let newHTML = '';
+                    if(globalMessages.length === 0) { 
+                        newHTML = '<div class="text-center text-gray-400 py-12 font-bold text-lg"><i class="fa-solid fa-envelope-open text-4xl mb-3 opacity-50 block"></i>ยังไม่มีข้อความค่ะ</div>'; 
+                    } else {
+                        globalMessages.forEach(msg => {
+                            let dot = msg.is_read ? '' : '<div class="w-3 h-3 bg-red-500 rounded-full shrink-0 shadow-sm animate-pulse"></div>';
+                            let bg = msg.is_read ? 'bg-gray-50 border-gray-100' : 'bg-blue-50 border-blue-100 shadow-sm';
+                            let txt = msg.is_read ? 'text-gray-500' : 'text-blue-800 font-extrabold';
+                            newHTML += `<div onclick="viewMessage('${msg.id}')" class="p-5 border rounded-2xl cursor-pointer hover:scale-[1.02] transition-transform flex items-center justify-between mb-4 ${bg}"><div class="pr-4 overflow-hidden"><h4 class="text-base truncate w-full ${txt} mb-1">${msg.title}</h4><p class="text-xs text-gray-400"><i class="fa-regular fa-clock mr-1"></i> ${msg.date}</p></div>${dot}</div>`;
+                        });
+                    }
+                    if(list.innerHTML !== newHTML) list.innerHTML = newHTML;
+                }
+            }
+        }
+        
+        async function fetchFullHistoryBackground() {
+            if(!currentUser) return;
+            const res = await fetchGASBackground({ action: 'get_full_history', username: currentUser.username });
+            if(res && res.status === 'success') {
+                const tbody = document.getElementById('full-history-table'); 
+                let newHTML = '';
+                if(res.history.length === 0) { 
+                    newHTML = '<tr><td colspan="6" class="p-12 text-center text-gray-400 font-bold">ยังไม่มีประวัติการสั่งซื้อใดๆ</td></tr>'; 
+                } else {
+                    res.history.forEach(h => {
+                        let stHtml = h.status.includes('สำเร็จ')?'bg-green-100 text-green-700':(h.status.includes('ยกเลิก')?'bg-red-100 text-red-700':'bg-yellow-100 text-yellow-700');
+                        newHTML += `<tr class="border-b border-gray-100 hover:bg-gray-50 transition"><td class="p-4 text-xs text-gray-400 font-mono">${h.id}</td><td class="p-4"><span class="bg-gray-100 text-gray-600 px-3 py-1.5 rounded-lg text-xs font-bold shadow-sm">${h.type}</span></td><td class="p-4 text-sm max-w-[250px] truncate font-bold text-gray-800">${h.detail} <br><span class="text-xs text-purple-500 font-normal mt-1 block">เป้าหมาย: ${h.uid}</span></td><td class="p-4 font-black text-pink-500 text-lg">${h.price}฿</td><td class="p-4"><span class="px-3 py-1.5 rounded-lg text-xs font-bold ${stHtml}">${h.status}</span></td><td class="p-4 text-xs text-gray-500 font-medium">${h.date}</td></tr>`;
+                    });
+                }
+                if(tbody.innerHTML !== newHTML) tbody.innerHTML = newHTML;
+            }
         }
 
         async function loadDashboard() {
-            if (!currentUser) return;
-            const res = await fetchGAS({ action: 'get_dashboard', username: currentUser.username });
-            if (res && res.status === 'success') {
-                document.getElementById('dash-credit').innerText = res.stats.balance.toFixed(2);
-                document.getElementById('nav-credit').innerText = res.stats.balance.toFixed(2);
-                currentUser.credit = res.stats.balance; localStorage.setItem('imlady_session', JSON.stringify(currentUser));
-                
-                const tbody = document.getElementById('history-table'); tbody.innerHTML = '';
-                if(res.history.length === 0) tbody.innerHTML = '<tr><td colspan="4" class="p-8 text-center text-gray-400 font-medium">ยังไม่มีประวัติการสั่งซื้อ เริ่มช้อปได้เลย!</td></tr>';
-                else res.history.forEach(h => {
-                    let stHtml = '';
-                    if(h.status.includes('สำเร็จ')) stHtml = `<span class="bg-green-100 text-green-700 px-3 py-1 rounded-md text-xs font-bold">${h.status}</span>`;
-                    else if(h.status.includes('ยกเลิก')) stHtml = `<span class="bg-red-100 text-red-700 px-3 py-1 rounded-md text-xs font-bold">${h.status}</span>`;
-                    else stHtml = `<span class="bg-yellow-100 text-yellow-700 px-3 py-1 rounded-md text-xs font-bold">${h.status}</span>`;
-
-                    tbody.innerHTML += `<tr class="border-b border-gray-50 hover:bg-gray-50 transition"><td class="py-4 pl-2 font-bold text-gray-800">${h.detail}</td><td class="py-4 font-black text-pink-500">${h.price}฿</td><td class="py-4">${stHtml}</td><td class="py-4 text-xs text-gray-400 text-right pr-2">${h.date.split(' ')[0]}</td></tr>`;
-                });
-                fetchInboxData(); 
-            }
+            // First load is silent and smooth
+            await syncDashboardData(); 
         }
 
         async function openFullHistory() {
-            const res = await fetchGAS({ action: 'get_full_history', username: currentUser.username });
-            if(res && res.status === 'success') {
-                const tbody = document.getElementById('full-history-table'); tbody.innerHTML = '';
-                if(res.history.length === 0) { tbody.innerHTML = '<tr><td colspan="6" class="p-12 text-center text-gray-400 font-bold">ยังไม่มีประวัติการสั่งซื้อใดๆ</td></tr>'; }
-                else {
-                    res.history.forEach(h => {
-                        let stHtml = h.status.includes('สำเร็จ')?'bg-green-100 text-green-700':(h.status.includes('ยกเลิก')?'bg-red-100 text-red-700':'bg-yellow-100 text-yellow-700');
-                        tbody.innerHTML += `<tr class="border-b border-gray-100 hover:bg-gray-50 transition"><td class="p-4 text-xs text-gray-400 font-mono">${h.id}</td><td class="p-4"><span class="bg-gray-100 text-gray-600 px-3 py-1.5 rounded-lg text-xs font-bold shadow-sm">${h.type}</span></td><td class="p-4 text-sm max-w-[250px] truncate font-bold text-gray-800">${h.detail} <br><span class="text-xs text-purple-500 font-normal mt-1 block">เป้าหมาย: ${h.uid}</span></td><td class="p-4 font-black text-pink-500 text-lg">${h.price}฿</td><td class="p-4"><span class="px-3 py-1.5 rounded-lg text-xs font-bold ${stHtml}">${h.status}</span></td><td class="p-4 text-xs text-gray-500 font-medium">${h.date}</td></tr>`;
-                    });
-                }
-                showModal('history-modal');
-            }
-        }
-
-        async function fetchInboxData() {
-            if(!currentUser) return;
-            const res = await fetchGAS({ action: 'get_inbox', username: currentUser.username });
-            if(res && res.status === 'success') {
-                globalMessages = res.messages; const badge = document.getElementById('unread-badge');
-                if(res.unread > 0) { badge.innerText = res.unread; badge.classList.remove('hidden'); } else badge.classList.add('hidden');
-            }
+            showModal('loading-modal');
+            await fetchFullHistoryBackground();
+            hideModal('loading-modal');
+            showModal('history-modal');
         }
 
         function openInbox() {
-            const list = document.getElementById('inbox-list'); list.innerHTML = '';
-            if(globalMessages.length === 0) { list.innerHTML = '<div class="text-center text-gray-400 py-12 font-bold text-lg"><i class="fa-solid fa-envelope-open text-4xl mb-3 opacity-50 block"></i>ยังไม่มีข้อความค่ะ</div>'; }
-            else {
+            // Force UI update from globalMessages
+            const list = document.getElementById('inbox-list'); 
+            list.innerHTML = '';
+            if(globalMessages.length === 0) { 
+                list.innerHTML = '<div class="text-center text-gray-400 py-12 font-bold text-lg"><i class="fa-solid fa-envelope-open text-4xl mb-3 opacity-50 block"></i>ยังไม่มีข้อความค่ะ</div>'; 
+            } else {
                 globalMessages.forEach(msg => {
                     let dot = msg.is_read ? '' : '<div class="w-3 h-3 bg-red-500 rounded-full shrink-0 shadow-sm animate-pulse"></div>';
                     let bg = msg.is_read ? 'bg-gray-50 border-gray-100' : 'bg-blue-50 border-blue-100 shadow-sm';
@@ -821,40 +1046,102 @@ email2@test.com:pass2"></textarea>
         async function viewMessage(id) {
             const msg = globalMessages.find(m => m.id === id);
             if(msg) {
-                document.getElementById('read-msg-title').innerText = msg.title; document.getElementById('read-msg-date').innerHTML = `<i class="fa-regular fa-clock mr-1"></i> ${msg.date}`; document.getElementById('read-msg-detail').innerText = msg.detail;
+                document.getElementById('read-msg-title').innerText = msg.title; 
+                document.getElementById('read-msg-date').innerHTML = `<i class="fa-regular fa-clock mr-1"></i> ${msg.date}`; 
+                document.getElementById('read-msg-detail').innerText = msg.detail;
                 showModal('read-msg-modal');
-                if(!msg.is_read) { await fetchGAS({ action: 'read_message', msg_id: id }); fetchInboxData(); }
+                
+                if(!msg.is_read) { 
+                    await fetchGASBackground({ action: 'read_message', msg_id: id }); 
+                    fetchInboxDataBackground(); 
+                }
             }
         }
 
+        // 🟢 ลูกค้าเติมเงินเปลี่ยนยอดอัตโนมัติเลย (ไม่ต้องรอแอดมิน)
         async function submitTopup() {
-            const amt = document.getElementById('topup-amount').value, ref = document.getElementById('topup-ref').value, file = document.getElementById('topup-file').files[0];
-            if(!amt || !ref || !file) return showAlert('ข้อมูลไม่ครบ', 'กรอกยอด เลขอ้างอิง และแนบสลิปให้ครบนะคะ', 'error');
+            const amt = document.getElementById('topup-amount').value;
+            const ref = document.getElementById('topup-ref').value;
+            const file = document.getElementById('topup-file').files[0];
+            
+            if(!amt || !ref || !file) {
+                return showAlert('ข้อมูลไม่ครบ', 'กรอกยอด เลขอ้างอิง และแนบสลิปให้ครบนะคะ', 'error');
+            }
+            
             const reader = new FileReader();
-            reader.onload = async function() { const res = await fetchGAS({ action: 'topup', username: currentUser.username, amount: amt, ref_code: ref, file: reader.result }); if(res && res.status === 'success') { closeAllModals(); showAlert('ส่งหลักฐานสำเร็จ!', res.message, 'success'); document.getElementById('topup-amount').value=''; document.getElementById('topup-ref').value=''; document.getElementById('topup-file').value=''; } else if(res) showAlert('ผิดพลาด', res.message, 'error'); }; reader.readAsDataURL(file);
+            reader.onload = async function() { 
+                const res = await fetchGAS({ 
+                    action: 'topup', 
+                    username: currentUser.username, 
+                    amount: amt, 
+                    ref_code: ref, 
+                    file: reader.result 
+                }); 
+                if(res && res.status === 'success') { 
+                    closeAllModals(); 
+                    showAlert('สำเร็จ!', res.message, 'success'); 
+                    
+                    // Clear inputs
+                    document.getElementById('topup-amount').value = ''; 
+                    document.getElementById('topup-ref').value = ''; 
+                    document.getElementById('topup-file').value = ''; 
+                    
+                    // Sync ยอดใหม่ทันทีโดยไม่ต้องรอรอบ 5 วินาที
+                    syncDashboardData(); 
+                } else if(res) {
+                    showAlert('ผิดพลาด', res.message, 'error'); 
+                }
+            }; 
+            reader.readAsDataURL(file);
         }
 
-        // --- SMM System with Dynamic Custom Comments ---
+        // --- SMM System ---
         async function initializeSMM() {
             if(!smmDataCache) {
                 const res = await fetchGAS({ action: 'get_smm' });
                 if(res && res.status === 'success') {
-                    smmDataCache = res.data; const platSel = document.getElementById('smm-platform'); platSel.innerHTML = '<option value="">-- เลือกแพลตฟอร์ม --</option>';
-                    Object.keys(smmDataCache).forEach(k => { platSel.innerHTML += `<option value="${k}">${k.toUpperCase()}</option>`; });
+                    smmDataCache = res.data; 
+                    const platSel = document.getElementById('smm-platform'); 
+                    platSel.innerHTML = '<option value="">-- เลือกแพลตฟอร์ม --</option>';
+                    Object.keys(smmDataCache).forEach(k => { 
+                        platSel.innerHTML += `<option value="${k}">${k.toUpperCase()}</option>`; 
+                    });
                 }
             }
         }
 
         function renderSMMCategories() {
-            const plat = document.getElementById('smm-platform').value; const catSel = document.getElementById('smm-category');
-            catSel.innerHTML = '<option value="">-- เลือกหมวดหมู่ --</option>'; document.getElementById('smm-service').innerHTML = '<option value="">-- กรุณาเลือกหมวดหมู่ก่อน --</option>'; document.getElementById('smm-detail-box').classList.add('hidden'); document.getElementById('smm-comments-container').classList.add('hidden'); document.getElementById('smm-qty').value = ''; document.getElementById('smm-price').innerText = '0.00';
-            if(plat && smmDataCache[plat]) smmDataCache[plat].forEach((c, idx) => { catSel.innerHTML += `<option value="${idx}">${c.category_name}</option>`; });
+            const plat = document.getElementById('smm-platform').value; 
+            const catSel = document.getElementById('smm-category');
+            catSel.innerHTML = '<option value="">-- เลือกหมวดหมู่ --</option>'; 
+            document.getElementById('smm-service').innerHTML = '<option value="">-- กรุณาเลือกหมวดหมู่ก่อน --</option>'; 
+            document.getElementById('smm-detail-box').classList.add('hidden'); 
+            document.getElementById('smm-comments-container').classList.add('hidden'); 
+            document.getElementById('smm-qty').value = ''; 
+            document.getElementById('smm-price').innerText = '0.00';
+            
+            if(plat && smmDataCache[plat]) {
+                smmDataCache[plat].forEach((c, idx) => { 
+                    catSel.innerHTML += `<option value="${idx}">${c.category_name}</option>`; 
+                });
+            }
         }
 
         function renderSMMServices() {
-            const plat = document.getElementById('smm-platform').value; const catIdx = document.getElementById('smm-category').value; const srvSel = document.getElementById('smm-service');
-            srvSel.innerHTML = '<option value="">-- เลือกบริการที่ต้องการ --</option>'; document.getElementById('smm-detail-box').classList.add('hidden'); document.getElementById('smm-comments-container').classList.add('hidden'); document.getElementById('smm-qty').value = ''; document.getElementById('smm-price').innerText = '0.00';
-            if(plat && catIdx !== "") smmDataCache[plat][catIdx].services.forEach((s, idx) => { srvSel.innerHTML += `<option value="${idx}" data-id="${s.id}" data-rate="${s.rate}" data-min="${s.min}" data-max="${s.max}" data-desc="${s.desc}" data-name="${s.name}" data-type="Default">${s.name}</option>`; });
+            const plat = document.getElementById('smm-platform').value; 
+            const catIdx = document.getElementById('smm-category').value; 
+            const srvSel = document.getElementById('smm-service');
+            srvSel.innerHTML = '<option value="">-- เลือกบริการที่ต้องการ --</option>'; 
+            document.getElementById('smm-detail-box').classList.add('hidden'); 
+            document.getElementById('smm-comments-container').classList.add('hidden'); 
+            document.getElementById('smm-qty').value = ''; 
+            document.getElementById('smm-price').innerText = '0.00';
+            
+            if(plat && catIdx !== "") {
+                smmDataCache[plat][catIdx].services.forEach((s, idx) => { 
+                    srvSel.innerHTML += `<option value="${idx}" data-id="${s.id}" data-rate="${s.rate}" data-min="${s.min}" data-max="${s.max}" data-desc="${s.desc}" data-name="${s.name}" data-type="Default">${s.name}</option>`; 
+                });
+            }
         }
 
         function getExampleLink(platform, serviceName) {
@@ -882,7 +1169,8 @@ email2@test.com:pass2"></textarea>
 
         function updateSMMDetails() {
             const plat = document.getElementById('smm-platform').value;
-            const sel = document.getElementById('smm-service'); const box = document.getElementById('smm-detail-box');
+            const sel = document.getElementById('smm-service'); 
+            const box = document.getElementById('smm-detail-box');
             const commentBox = document.getElementById('smm-comments-container');
             const qtyInput = document.getElementById('smm-qty');
 
@@ -891,14 +1179,17 @@ email2@test.com:pass2"></textarea>
                 const name = String(opt.getAttribute('data-name')).toLowerCase();
                 
                 const isCustom = name.includes('กำหนดเอง') || name.includes('คอมเมนต์') || name.includes('ความคิดเห็น');
-
                 if (isCustom) {
-                    commentBox.classList.remove('hidden'); commentBox.classList.add('fade-in');
-                    qtyInput.setAttribute('readonly', 'true'); qtyInput.classList.add('bg-gray-100', 'cursor-not-allowed', 'text-gray-400');
-                    qtyInput.value = ''; document.getElementById('smm-comments').value = '';
+                    commentBox.classList.remove('hidden'); 
+                    commentBox.classList.add('fade-in');
+                    qtyInput.setAttribute('readonly', 'true'); 
+                    qtyInput.classList.add('bg-gray-100', 'cursor-not-allowed', 'text-gray-400');
+                    qtyInput.value = ''; 
+                    document.getElementById('smm-comments').value = '';
                 } else {
                     commentBox.classList.add('hidden');
-                    qtyInput.removeAttribute('readonly'); qtyInput.classList.remove('bg-gray-100', 'cursor-not-allowed', 'text-gray-400');
+                    qtyInput.removeAttribute('readonly'); 
+                    qtyInput.classList.remove('bg-gray-100', 'cursor-not-allowed', 'text-gray-400');
                 }
 
                 document.getElementById('smm-rate-info').innerText = `${opt.getAttribute('data-rate')} ฿`;
@@ -907,9 +1198,12 @@ email2@test.com:pass2"></textarea>
                 document.getElementById('smm-min').innerText = opt.getAttribute('data-min'); 
                 document.getElementById('smm-max').innerText = opt.getAttribute('data-max'); 
                 
-                box.classList.remove('hidden'); box.classList.add('fade-in'); calculateSMMPrice(); 
+                box.classList.remove('hidden'); 
+                box.classList.add('fade-in'); 
+                calculateSMMPrice(); 
             } else { 
-                box.classList.add('hidden'); commentBox.classList.add('hidden');
+                box.classList.add('hidden'); 
+                commentBox.classList.add('hidden');
             }
         }
 
@@ -921,7 +1215,8 @@ email2@test.com:pass2"></textarea>
             if (!commentBox.classList.contains('hidden')) {
                 const text = document.getElementById('smm-comments').value;
                 const lines = text.split('\n').filter(line => line.trim() !== '');
-                qty = lines.length; document.getElementById('smm-qty').value = qty;
+                qty = lines.length; 
+                document.getElementById('smm-qty').value = qty;
             } else {
                 qty = parseInt(document.getElementById('smm-qty').value) || 0;
             }
@@ -929,13 +1224,21 @@ email2@test.com:pass2"></textarea>
             if (sel.selectedIndex > 0 && qty > 0) { 
                 const rate = parseFloat(sel.options[sel.selectedIndex].getAttribute('data-rate')); 
                 document.getElementById('smm-price').innerText = ((rate / 1000) * qty).toFixed(2); 
-            } else { document.getElementById('smm-price').innerText = '0.00'; }
+            } else { 
+                document.getElementById('smm-price').innerText = '0.00'; 
+            }
         }
 
         function previewSMMOrder() {
-            const sel = document.getElementById('smm-service'); if(sel.selectedIndex === 0) return showAlert('ยังไม่เลือกบริการ', 'กรุณาเลือกบริการปั๊มยอดที่ต้องการก่อนค่ะ', 'error');
-            const link = document.getElementById('smm-link').value, qty = parseInt(document.getElementById('smm-qty').value) || 0; const price = parseFloat(document.getElementById('smm-price').innerText);
-            const min = parseInt(sel.options[sel.selectedIndex].getAttribute('data-min')); const max = parseInt(sel.options[sel.selectedIndex].getAttribute('data-max'));
+            const sel = document.getElementById('smm-service'); 
+            if(sel.selectedIndex === 0) return showAlert('ยังไม่เลือกบริการ', 'กรุณาเลือกบริการปั๊มยอดที่ต้องการก่อนค่ะ', 'error');
+            
+            const link = document.getElementById('smm-link').value;
+            const qty = parseInt(document.getElementById('smm-qty').value) || 0; 
+            const price = parseFloat(document.getElementById('smm-price').innerText);
+            
+            const min = parseInt(sel.options[sel.selectedIndex].getAttribute('data-min')); 
+            const max = parseInt(sel.options[sel.selectedIndex].getAttribute('data-max'));
 
             if(!link || qty <= 0) return showAlert('ข้อมูลไม่ครบ', 'ใส่ลิงก์และจำนวนให้ถูกต้องนะคะ', 'error'); 
             if(qty < min || qty > max) return showAlert('จำนวนไม่ถูกต้อง', `บริการนี้สั่งได้ตั้งแต่ ${min} ถึง ${max} ค่ะ`, 'error');
@@ -950,15 +1253,21 @@ email2@test.com:pass2"></textarea>
             if(isCustom) {
                 document.getElementById('confirm-smm-comments').innerText = document.getElementById('smm-comments').value;
                 document.getElementById('confirm-smm-comment-box').classList.remove('hidden');
-            } else { document.getElementById('confirm-smm-comment-box').classList.add('hidden'); }
+            } else { 
+                document.getElementById('confirm-smm-comment-box').classList.add('hidden'); 
+            }
 
             showModal('smm-confirm-modal');
         }
 
         async function processSMMOrder() {
             hideModal('smm-confirm-modal');
-            const sel = document.getElementById('smm-service'); const serviceId = sel.options[sel.selectedIndex].getAttribute('data-id'); 
-            const link = document.getElementById('smm-link').value; const qty = document.getElementById('smm-qty').value; const price = parseFloat(document.getElementById('smm-price').innerText);
+            const sel = document.getElementById('smm-service'); 
+            const serviceId = sel.options[sel.selectedIndex].getAttribute('data-id'); 
+            
+            const link = document.getElementById('smm-link').value; 
+            const qty = document.getElementById('smm-qty').value; 
+            const price = parseFloat(document.getElementById('smm-price').innerText);
             
             const isCustom = !document.getElementById('smm-comments-container').classList.contains('hidden');
             const comments = isCustom ? document.getElementById('smm-comments').value : '';
@@ -966,17 +1275,23 @@ email2@test.com:pass2"></textarea>
             const res = await fetchGAS({ action: 'order_smm', username: currentUser.username, service_id: serviceId, link: link, quantity: qty, comments: comments, price: price });
             if(res && res.status === 'success') { 
                 showAlert('สั่งซื้อสำเร็จ!', res.message, 'success'); 
-                document.getElementById('smm-link').value = ''; document.getElementById('smm-qty').value = ''; if(isCustom) document.getElementById('smm-comments').value = ''; document.getElementById('smm-price').innerText = '0.00'; 
-                loadDashboard(); 
-            } else if(res) showAlert('ผิดพลาด', res.message, 'error');
+                document.getElementById('smm-link').value = ''; 
+                document.getElementById('smm-qty').value = ''; 
+                if(isCustom) document.getElementById('smm-comments').value = ''; 
+                document.getElementById('smm-price').innerText = '0.00'; 
+                syncDashboardData(); 
+            } else if(res) {
+                showAlert('ผิดพลาด', res.message, 'error');
+            }
         }
 
         // --- Store / Game ---
         async function loadProducts() {
-            const res = await fetchGAS({ action: 'get_products' });
+            const res = await fetchGASBackground({ action: 'get_products' });
             if(res && res.status === 'success') {
                 productsCache = res.products;
-                const grid = document.getElementById('product-grid'); grid.innerHTML = '';
+                const grid = document.getElementById('product-grid'); 
+                grid.innerHTML = '';
                 const adminStock = document.getElementById('stock-product-id'); 
                 if(adminStock) adminStock.innerHTML = '<option value="">-- เลือกแอปพรีเมียมที่จะเติมสต๊อก --</option>';
 
@@ -1000,25 +1315,105 @@ email2@test.com:pass2"></textarea>
             }
         }
 
-        function openGameModal(name, detail, price) { document.getElementById('game-modal-desc').innerText = `${name} | ${detail} | ราคา ${price} ฿`; document.getElementById('game-temp-data').value = JSON.stringify({name: name, detail: detail, price: price}); document.getElementById('game-uid').value = ''; showModal('game-modal'); }
+        function openGameModal(name, detail, price) { 
+            document.getElementById('game-modal-desc').innerText = `${name} | ${detail} | ราคา ${price} ฿`; 
+            document.getElementById('game-temp-data').value = JSON.stringify({name: name, detail: detail, price: price}); 
+            document.getElementById('game-uid').value = ''; 
+            showModal('game-modal'); 
+        }
 
         async function confirmGameOrder() {
-            const uid = document.getElementById('game-uid').value; if(!uid) return showAlert('ข้อมูลไม่ครบ', 'กรุณากรอก UID หรือ OpenID ก่อนนะคะ', 'error');
+            const uid = document.getElementById('game-uid').value; 
+            if(!uid) return showAlert('ข้อมูลไม่ครบ', 'กรุณากรอก UID หรือ OpenID ก่อนนะคะ', 'error');
+            
             const pData = JSON.parse(document.getElementById('game-temp-data').value);
             const res = await fetchGAS({ action: 'order_game', username: currentUser.username, type: 'เกม', product_name: pData.name, quantity: pData.detail, uid: uid, price: pData.price });
-            if(res && res.status === 'success') { closeAllModals(); showAlert('สำเร็จ!', res.message, 'success'); loadDashboard(); } else if(res) showAlert('ผิดพลาด', res.message, 'error');
+            if(res && res.status === 'success') { 
+                closeAllModals(); 
+                showAlert('สำเร็จ!', res.message, 'success'); 
+                syncDashboardData(); 
+            } else if(res) {
+                showAlert('ผิดพลาด', res.message, 'error');
+            }
         }
 
         // --- Admin ---
         function switchAdminTab(tab) {
-            document.querySelectorAll('.admin-tab').forEach(el => el.classList.remove('active')); document.getElementById(`admin-tab-${tab}`).classList.add('active');
-            const btns = document.querySelectorAll('#page-admin button[onclick^="switchAdminTab"]'); btns.forEach(b => { b.className = "px-6 py-3 bg-white text-gray-500 font-bold rounded-xl hover:bg-purple-50 transition border border-gray-200"; }); event.currentTarget.className = "px-6 py-3 bg-purple-600 text-white font-bold rounded-xl shadow-md transition";
+            document.querySelectorAll('.admin-tab').forEach(el => el.classList.remove('active')); 
+            document.getElementById(`admin-tab-${tab}`).classList.add('active');
+            
+            const btns = document.querySelectorAll('#page-admin button[onclick^="switchAdminTab"]'); 
+            btns.forEach(b => { 
+                b.className = "px-6 py-3 bg-white text-gray-500 font-bold rounded-xl hover:bg-purple-50 transition border border-gray-200"; 
+            }); 
+            event.currentTarget.className = "px-6 py-3 bg-purple-600 text-white font-bold rounded-xl shadow-md transition";
         }
 
-        async function submitAdminApp() { const res = await fetchGAS({ action: 'admin_add_product', type: 'app', name: document.getElementById('add-app-name').value, category: 'แอพพรีเมียม', image: document.getElementById('add-app-img').value, price: document.getElementById('add-app-price').value, desc: document.getElementById('add-app-desc').value }); if(res && res.status==='success') { showAlert('เพิ่มแอปสำเร็จ', res.message, 'success'); document.getElementById('add-app-name').value=''; document.getElementById('add-app-price').value=''; loadProducts(); } }
-        async function submitAdminGame() { const res = await fetchGAS({ action: 'admin_add_product', type: 'game', name: document.getElementById('add-game-cat').value, category: 'เติมเกม', image: document.getElementById('add-game-img').value, price: document.getElementById('add-game-price').value, quantity_val: document.getElementById('add-game-qty').value, quantity_unit: document.getElementById('add-game-unit').value, desc: document.getElementById('add-game-desc').value }); if(res && res.status==='success') { showAlert('เพิ่มเกมสำเร็จ', res.message, 'success'); document.getElementById('add-game-cat').value=''; document.getElementById('add-game-price').value=''; loadProducts(); } }
-        async function submitAdminStock() { const pid = document.getElementById('stock-product-id').value, codes = document.getElementById('stock-codes').value; if(!pid || !codes) return showAlert('ข้อมูลไม่ครบ', 'เลือกแอปและใส่รหัสด้วยนะคะ', 'error'); const res = await fetchGAS({ action: 'admin_add_stock', product_id: pid, codes: codes }); if(res && res.status==='success') { showAlert('เติมสต๊อกสำเร็จ!', res.message, 'success'); document.getElementById('stock-codes').value = ''; loadProducts(); } }
-        async function submitAdminMessage() { const user = document.getElementById('admin-msg-user').value, title = document.getElementById('admin-msg-title').value, detail = document.getElementById('admin-msg-detail').value; if(!user || !title || !detail) return showAlert('ข้อมูลไม่ครบ', 'กรุณากรอกข้อมูลให้ครบทุกช่องนะคะ', 'error'); const res = await fetchGAS({ action: 'admin_send_message', target_user: user, title: title, detail: detail }); if(res && res.status === 'success') { showAlert('ส่งข้อความสำเร็จ', res.message, 'success'); document.getElementById('admin-msg-title').value = ''; document.getElementById('admin-msg-detail').value = ''; } else if(res) showAlert('ผิดพลาด', res.message, 'error'); }
+        async function submitAdminApp() { 
+            const res = await fetchGAS({ 
+                action: 'admin_add_product', type: 'app', 
+                name: document.getElementById('add-app-name').value, 
+                category: 'แอพพรีเมียม', 
+                image: document.getElementById('add-app-img').value, 
+                price: document.getElementById('add-app-price').value, 
+                desc: document.getElementById('add-app-desc').value 
+            }); 
+            if(res && res.status==='success') { 
+                showAlert('เพิ่มแอปสำเร็จ', res.message, 'success'); 
+                document.getElementById('add-app-name').value=''; 
+                document.getElementById('add-app-price').value=''; 
+                loadProducts(); 
+            } 
+        }
+        
+        async function submitAdminGame() { 
+            const res = await fetchGAS({ 
+                action: 'admin_add_product', type: 'game', 
+                name: document.getElementById('add-game-cat').value, 
+                category: 'เติมเกม', 
+                image: document.getElementById('add-game-img').value, 
+                price: document.getElementById('add-game-price').value, 
+                quantity_val: document.getElementById('add-game-qty').value, 
+                quantity_unit: document.getElementById('add-game-unit').value, 
+                desc: document.getElementById('add-game-desc').value 
+            }); 
+            if(res && res.status==='success') { 
+                showAlert('เพิ่มเกมสำเร็จ', res.message, 'success'); 
+                document.getElementById('add-game-cat').value=''; 
+                document.getElementById('add-game-price').value=''; 
+                loadProducts(); 
+            } 
+        }
+        
+        async function submitAdminStock() { 
+            const pid = document.getElementById('stock-product-id').value;
+            const codes = document.getElementById('stock-codes').value; 
+            if(!pid || !codes) return showAlert('ข้อมูลไม่ครบ', 'เลือกแอปและใส่รหัสด้วยนะคะ', 'error'); 
+            
+            const res = await fetchGAS({ action: 'admin_add_stock', product_id: pid, codes: codes }); 
+            if(res && res.status==='success') { 
+                showAlert('เติมสต๊อกสำเร็จ!', res.message, 'success'); 
+                document.getElementById('stock-codes').value = ''; 
+                loadProducts(); 
+            } 
+        }
+        
+        async function submitAdminMessage() { 
+            const user = document.getElementById('admin-msg-user').value;
+            const title = document.getElementById('admin-msg-title').value;
+            const detail = document.getElementById('admin-msg-detail').value; 
+            
+            if(!user || !title || !detail) return showAlert('ข้อมูลไม่ครบ', 'กรุณากรอกข้อมูลให้ครบทุกช่องนะคะ', 'error'); 
+            
+            const res = await fetchGAS({ action: 'admin_send_message', target_user: user, title: title, detail: detail }); 
+            if(res && res.status === 'success') { 
+                showAlert('ส่งข้อความสำเร็จ', res.message, 'success'); 
+                document.getElementById('admin-msg-title').value = ''; 
+                document.getElementById('admin-msg-detail').value = ''; 
+            } else if(res) {
+                showAlert('ผิดพลาด', res.message, 'error');
+            } 
+        }
 
         window.onload = checkLoginState;
     </script>
