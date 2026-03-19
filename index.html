@@ -214,7 +214,8 @@
                     <i class="fa-solid fa-star text-yellow-400 text-2xl mr-3"></i>
                     <h2 class="text-3xl font-bold text-gray-800">สินค้าพรีเมียมแนะนำ</h2>
                 </div>
-                <div class="grid grid-cols-2 md:grid-cols-4 gap-6" id="guest-products-grid"></div>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-6" id="guest-products-grid">
+                    </div>
             </div>
 
             <div class="w-full mb-16 slide-up">
@@ -222,7 +223,8 @@
                     <i class="fa-solid fa-bolt text-purple-400 text-2xl mr-3"></i>
                     <h2 class="text-3xl font-bold text-gray-800">บริการเพิ่มยอดโซเชียล</h2>
                 </div>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6" id="guest-smm-grid"></div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6" id="guest-smm-grid">
+                    </div>
             </div>
         </div>
 
@@ -496,7 +498,8 @@
                         </div>
                         <div>
                             <label class="block text-sm text-gray-500 mb-2 font-bold">ใส่รหัสสินค้า (1 บรรทัด = 1 รหัส)</label>
-                            <textarea id="stock-codes" class="cute-input h-48 font-mono text-sm border-purple-100 leading-relaxed bg-gray-50" placeholder="email1@test.com:pass1"></textarea>
+                            <textarea id="stock-codes" class="cute-input h-48 font-mono text-sm border-purple-100 leading-relaxed bg-gray-50" placeholder="email1@test.com:pass1
+email2@test.com:pass2"></textarea>
                         </div>
                         <button onclick="submitAdminStock()" class="w-full bg-purple-600 text-white py-4 rounded-xl font-bold hover:bg-purple-700 transition shadow-lg">อัปเดตสต๊อก</button>
                     </div>
@@ -563,6 +566,32 @@
                 <button onclick="hideModal('smm-confirm-modal')" class="flex-1 bg-white border-2 border-gray-200 text-gray-600 font-bold py-3.5 rounded-xl hover:bg-gray-50 transition shadow-sm">ยกเลิก</button>
                 <button onclick="processSMMOrder()" class="flex-1 btn-pink py-3.5 rounded-xl shadow-lg font-bold"><i class="fa-solid fa-check mr-1"></i> ยืนยันสั่งซื้อ</button>
             </div>
+        </div>
+    </div>
+
+    <div id="product-modal" class="modal-container hidden fixed inset-0 bg-black/60 backdrop-blur-sm flex items-center justify-center z-[80] p-4">
+        <div class="bg-white p-8 rounded-[2rem] w-full max-w-md shadow-2xl relative border-t-8 border-pink-400 slide-up">
+            <button onclick="hideModal('product-modal')" class="absolute top-6 right-6 text-gray-400 hover:text-pink-500 transition"><i class="fa-solid fa-xmark text-2xl"></i></button>
+            
+            <div class="text-center mb-5">
+                <img id="pm-img" src="" class="w-28 h-28 mx-auto rounded-[1.5rem] object-cover shadow-md mb-4 border border-gray-100">
+                <div id="pm-cat" class="text-xs text-pink-500 font-bold uppercase tracking-wide bg-pink-50 inline-block px-3 py-1 rounded-md border border-pink-100 mb-2"></div>
+                <h3 id="pm-name" class="text-2xl font-extrabold text-gray-800 leading-tight"></h3>
+            </div>
+            
+            <div class="bg-gray-50 rounded-2xl p-4 mb-6 border border-gray-100 max-h-32 overflow-y-auto">
+                <p id="pm-desc" class="text-sm text-gray-600 whitespace-pre-wrap leading-relaxed"></p>
+            </div>
+            
+            <div class="flex justify-between items-center mb-6 bg-pink-50 p-4 rounded-xl border border-pink-100">
+                <div class="text-gray-500 font-bold text-sm">สต๊อกคงเหลือ: <span id="pm-stock" class="text-pink-600 text-lg">0</span> ชิ้น</div>
+                <div class="text-3xl font-black text-pink-600"><span id="pm-price">0.00</span> <span class="text-lg">฿</span></div>
+            </div>
+            
+            <input type="hidden" id="pm-id">
+            <button onclick="confirmAppOrder()" class="w-full btn-pink py-4 rounded-xl font-bold text-lg shadow-lg flex items-center justify-center">
+                <i class="fa-solid fa-cart-shopping mr-2"></i> ยืนยันการสั่งซื้อ
+            </button>
         </div>
     </div>
 
@@ -655,9 +684,9 @@
                 <h3 class="text-3xl font-extrabold text-gray-800">แจ้งโอนเงิน</h3>
             </div>
             
-            <div class="bg-pink-50 p-5 rounded-2xl mb-8 flex flex-col items-center border border-green-100 shadow-inner">
+            <div class="bg-green-50 p-5 rounded-2xl mb-8 flex flex-col items-center border border-green-100 shadow-inner">
                 <p class="text-sm text-gray-600 font-bold mb-3">สแกน QR Code เพื่อชำระเงิน</p>
-                <img src="https://img2.pic.in.th/IMG_37395b590b404f28dea2.jpeg" alt="QR Code" class="w-48 h-48 rounded-xl shadow-md border-4 border-white mb-3 object-cover">
+                <img src="https://img5.pic.in.th/file/secure-sv1/-629_20260222132327.png" alt="QR Code" class="w-48 h-48 rounded-xl shadow-md border-4 border-white mb-3 object-cover">
                 <p class="text-xs text-gray-500 bg-white inline-block px-4 py-1.5 rounded-full font-bold shadow-sm">รองรับทุกธนาคาร</p>
             </div>
 
@@ -682,14 +711,14 @@
     </div>
 
     <script>
-        // *** 🔴 สำคัญ: วาง URL ของ Google Apps Script ที่ช่องนี้ 🔴 ***
+        // *** 🔴 สำคัญ: วาง URL ของ Google Apps Script ของคุณที่ช่องนี้ 🔴 ***
         const API_URL = "https://script.google.com/macros/s/AKfycbyfAlBgDpUAc-EDrUAu1nF2-ffZh39un5aTA6uTLJ9lCzykTUm59jEW_7u3AX7slqCC/exec"; 
         
         let currentUser = null;
         let smmDataCache = null; 
         let globalMessages = [];
         let productsCache = [];
-        let syncInterval; // ตัวแปรสำหรับ Background Polling ทุก 5 วิ
+        let syncInterval; 
 
         // ----- PWA Setup -----
         const manifestObj = { 
@@ -723,7 +752,6 @@
             }
         }
         
-        // ฟังก์ชันโหลดข้อมูลเงียบๆ ไม่โชว์ Modal หมุนๆ (สำหรับ Background Polling)
         async function fetchGASBackground(payload) {
             try {
                 const response = await fetch(API_URL, { method: 'POST', body: JSON.stringify(payload) });
@@ -763,17 +791,14 @@
         function navigate(pageId) {
             closeAllModals(); 
             
-            // Guards
             if (!currentUser && pageId !== 'guest') pageId = 'guest'; 
             else if (currentUser && pageId === 'guest') pageId = 'dashboard';
 
-            // ซ่อนทุกหน้า
             document.querySelectorAll('.page').forEach(el => { 
                 el.classList.add('hidden'); 
                 el.classList.remove('flex', 'block'); 
             });
             
-            // แสดงหน้าเป้าหมาย
             const targetPage = document.getElementById('page-' + pageId);
             targetPage.classList.remove('hidden');
             if(pageId === 'guest') {
@@ -782,7 +807,6 @@
                 targetPage.classList.add('block');
             }
             
-            // จัดการ Active Menu
             if (pageId !== 'guest') {
                 document.querySelectorAll('.menu-btn').forEach(btn => { 
                     btn.classList.remove('active', 'text-pink-600', 'bg-pink-100/80'); 
@@ -795,7 +819,6 @@
                 }
             }
 
-            // Load data
             if(pageId === 'dashboard') loadDashboard();
             if(pageId === 'premium' || pageId === 'admin') loadProducts();
             if(pageId === 'smm') initializeSMM();
@@ -820,12 +843,12 @@
                     res.products.forEach(p => {
                         let stockBadge = p.type === 'app' ? `<div class="absolute top-4 right-4 bg-pink-100 text-pink-600 text-xs font-bold px-3 py-1 rounded-full shadow-sm z-10 border border-pink-200">เหลือ ${p.stock} ชิ้น</div>` : '';
                         pGrid.innerHTML += `
-                        <div class="cute-card overflow-hidden p-6 border border-pink-50 bounce-soft relative group flex flex-col items-center shadow-md">
+                        <div onclick="showModal('login-modal')" class="cute-card overflow-hidden p-6 border border-pink-50 relative bounce-soft group flex flex-col items-center shadow-md cursor-pointer h-full">
                             ${stockBadge}
-                            <img src="${p.image || 'https://via.placeholder.com/150'}" class="w-28 h-28 rounded-3xl mb-5 object-cover shadow-sm group-hover:scale-105 transition duration-300">
+                            <img src="${p.image || 'https://via.placeholder.com/150'}" class="w-28 h-28 rounded-3xl mb-4 object-cover shadow-sm group-hover:scale-105 transition duration-300 shrink-0">
                             <div class="text-xs text-gray-500 font-bold mb-2 uppercase tracking-wide bg-gray-50 px-2 py-1 rounded-md border border-gray-100">${p.category}</div>
-                            <div class="font-extrabold text-gray-800 truncate w-full text-center mb-4 text-xl">${p.name}</div>
-                            <button onclick="showModal('login-modal')" class="w-full bg-pink-50 text-pink-600 font-bold hover:bg-pink-100 py-3 rounded-2xl transition mt-auto shadow-sm">เข้าสู่ระบบเพื่อซื้อ</button>
+                            <div class="font-extrabold text-gray-800 text-center mb-2 text-lg whitespace-normal leading-snug w-full flex-grow">${p.name}</div>
+                            <div class="text-2xl font-black text-pink-600 w-full text-center mt-auto border-t border-gray-50 pt-3">${p.price} ฿</div>
                         </div>`;
                     });
                 }
@@ -866,7 +889,6 @@
                 document.getElementById('dash-username').innerText = currentUser.username;
                 navigate('dashboard');
                 
-                // 🟢 เริ่มต้น Background Polling ดึงข้อมูลทุก 5 วินาที
                 if(syncInterval) clearInterval(syncInterval);
                 syncInterval = setInterval(syncDashboardData, 5000); 
             } else {
@@ -926,18 +948,16 @@
             }
         }
 
-        // ----- Background Polling Logic (Load เร็ว สมูธ) -----
+        // ----- Background Polling Logic -----
         async function syncDashboardData() {
             if (!currentUser) return;
             const res = await fetchGASBackground({ action: 'get_dashboard', username: currentUser.username });
             if (res && res.status === 'success') {
-                // Update Credit
                 document.getElementById('dash-credit').innerText = res.stats.balance.toFixed(2);
                 document.getElementById('nav-credit').innerText = res.stats.balance.toFixed(2);
                 currentUser.credit = res.stats.balance; 
                 localStorage.setItem('imlady_session', JSON.stringify(currentUser));
                 
-                // Update History Table smoothly (Check if HTML changed before rewriting)
                 const tbody = document.getElementById('history-table'); 
                 let newHTML = '';
                 if(res.history.length === 0) {
@@ -954,10 +974,7 @@
                 }
                 if(tbody.innerHTML !== newHTML) tbody.innerHTML = newHTML;
                 
-                // Sync Inbox Data
                 fetchInboxDataBackground(); 
-                
-                // Sync Full history if modal is open
                 if (!document.getElementById('history-modal').classList.contains('hidden')) {
                     fetchFullHistoryBackground();
                 }
@@ -977,7 +994,6 @@
                     badge.classList.add('hidden');
                 }
                 
-                // Update Inbox list if modal is open
                 const list = document.getElementById('inbox-list');
                 if(!document.getElementById('inbox-modal').classList.contains('hidden') && list) {
                     let newHTML = '';
@@ -1015,7 +1031,6 @@
         }
 
         async function loadDashboard() {
-            // First load is silent and smooth
             await syncDashboardData(); 
         }
 
@@ -1027,7 +1042,6 @@
         }
 
         function openInbox() {
-            // Force UI update from globalMessages
             const list = document.getElementById('inbox-list'); 
             list.innerHTML = '';
             if(globalMessages.length === 0) { 
@@ -1058,7 +1072,6 @@
             }
         }
 
-        // 🟢 ลูกค้าเติมเงินเปลี่ยนยอดอัตโนมัติเลย (ไม่ต้องรอแอดมิน)
         async function submitTopup() {
             const amt = document.getElementById('topup-amount').value;
             const ref = document.getElementById('topup-ref').value;
@@ -1081,12 +1094,10 @@
                     closeAllModals(); 
                     showAlert('สำเร็จ!', res.message, 'success'); 
                     
-                    // Clear inputs
                     document.getElementById('topup-amount').value = ''; 
                     document.getElementById('topup-ref').value = ''; 
                     document.getElementById('topup-file').value = ''; 
                     
-                    // Sync ยอดใหม่ทันทีโดยไม่ต้องรอรอบ 5 วินาที
                     syncDashboardData(); 
                 } else if(res) {
                     showAlert('ผิดพลาด', res.message, 'error'); 
@@ -1285,7 +1296,7 @@
             }
         }
 
-        // --- Store / Game ---
+        // --- Store / Game (พร้อมแสดงรูปเต็มไม่มีการตัดคำ) ---
         async function loadProducts() {
             const res = await fetchGASBackground({ action: 'get_products' });
             if(res && res.status === 'success') {
@@ -1298,20 +1309,50 @@
                 productsCache.forEach(p => {
                     if(p.type === 'app' && adminStock) adminStock.innerHTML += `<option value="${p.id}">${p.name} - ${p.price}฿</option>`;
                     let stockBadge = p.type === 'app' ? `<div class="absolute top-4 right-4 bg-pink-100 text-pink-600 text-xs font-bold px-3 py-1 rounded-full shadow-sm z-10 border border-pink-200">เหลือ ${p.stock} ชิ้น</div>` : '';
-                    let buyBtn = p.type === 'game' 
-                        ? `<button onclick="openGameModal('${p.name}', '${p.quantity_val} ${p.quantity_unit}', ${p.price})" class="w-full btn-pink py-3 text-sm shadow-md mt-2 flex justify-center items-center"><i class="fa-solid fa-gamepad mr-2"></i> เติมเกมนี้ ${p.price}฿</button>`
-                        : `<button class="w-full bg-purple-500 text-white font-bold py-3 rounded-full text-sm hover:bg-purple-600 shadow-md mt-2 transition flex justify-center items-center"><i class="fa-solid fa-cart-shopping mr-2"></i> ซื้อแอป ${p.price}฿</button>`;
+                    
+                    let clickAction = p.type === 'game' ? `openGameModal('${p.name}', '${p.quantity_val} ${p.quantity_unit}', ${p.price})` : `openProductModal('${p.id}')`;
 
                     grid.innerHTML += `
-                        <div class="cute-card overflow-hidden p-6 border border-pink-50 relative bounce-soft group flex flex-col items-center shadow-md">
+                        <div onclick="${clickAction}" class="cute-card overflow-hidden p-6 border border-pink-50 relative bounce-soft group flex flex-col items-center shadow-md cursor-pointer h-full">
                             ${stockBadge}
-                            <img src="${p.image || 'https://via.placeholder.com/150'}" class="w-28 h-28 rounded-3xl mb-4 object-cover shadow-sm group-hover:scale-105 transition duration-300">
+                            <img src="${p.image || 'https://via.placeholder.com/150'}" class="w-28 h-28 rounded-3xl mb-4 object-cover shadow-sm group-hover:scale-105 transition duration-300 shrink-0">
                             <div class="text-xs text-gray-500 font-bold mb-2 uppercase tracking-wide bg-gray-50 px-2 py-1 rounded-md border border-gray-100">${p.category}</div>
-                            <div class="font-extrabold text-gray-800 truncate w-full text-center mb-1 text-xl">${p.name}</div>
-                            <div class="text-sm text-pink-400 font-medium mb-4">${p.type === 'game' ? `รับ ${p.quantity_val} ${p.quantity_unit}` : 'แอคเคาท์พรีเมียม'}</div>
-                            ${buyBtn}
+                            <div class="font-extrabold text-gray-800 text-center mb-2 text-lg whitespace-normal leading-snug w-full flex-grow">${p.name}</div>
+                            <div class="text-2xl font-black text-pink-600 w-full text-center mt-auto border-t border-gray-50 pt-3">${p.price} ฿</div>
                         </div>`;
                 });
+            }
+        }
+        
+        function openProductModal(id) {
+            const p = productsCache.find(x => x.id === id);
+            if(!p) return;
+            document.getElementById('pm-id').value = p.id;
+            document.getElementById('pm-img').src = p.image || 'https://via.placeholder.com/150';
+            document.getElementById('pm-cat').innerText = p.category;
+            document.getElementById('pm-name').innerText = p.name;
+            document.getElementById('pm-desc').innerText = p.desc || 'ไม่มีรายละเอียดเพิ่มเติม';
+            document.getElementById('pm-stock').innerText = p.stock;
+            document.getElementById('pm-price').innerText = p.price;
+            showModal('product-modal');
+        }
+        
+        async function confirmAppOrder() {
+            const pid = document.getElementById('pm-id').value;
+            if(!pid) return;
+            
+            const p = productsCache.find(x => x.id === pid);
+            if(p.stock <= 0) return showAlert('สินค้าหมด', 'ขออภัย สินค้านี้หมดสต๊อกชั่วคราวค่ะ', 'error');
+            if(currentUser.credit < p.price) return showAlert('เครดิตไม่พอ', 'ยอดเงินไม่พอค่ะ เติมเงินก่อนนะคะ', 'error');
+
+            const res = await fetchGAS({ action: 'order_app', username: currentUser.username, product_id: pid });
+            if(res && res.status === 'success') { 
+                closeAllModals(); 
+                showAlert('สั่งซื้อสำเร็จ!', res.message, 'success'); 
+                syncDashboardData(); 
+                loadProducts(); 
+            } else if(res) {
+                showAlert('ผิดพลาด', res.message, 'error');
             }
         }
 
